@@ -1980,3 +1980,335 @@ margin:40px 0;
 color:#ddd;
 
 }
+
+.section-title{
+
+font-size:48px;
+font-weight:800;
+color:#002d72;
+margin-bottom:20px;
+
+}
+
+.section-description{
+
+max-width:700px;
+
+font-size:17px;
+
+line-height:1.9;
+
+color:#666;
+
+}
+
+.small-text{
+
+display:inline-block;
+
+background:#f4f8ff;
+
+color:#002d72;
+
+padding:8px 20px;
+
+border-radius:30px;
+
+font-size:13px;
+
+font-weight:600;
+
+letter-spacing:2px;
+
+margin-bottom:20px;
+
+}
+
+/** range of age form*/
+.vocation-contact-form input,
+.vocation-contact-form select,
+.vocation-contact-form textarea{
+
+width:100%;
+
+border:1px solid #e0e5ee;
+
+background:transparent;
+
+padding:11px 14px;
+
+margin-bottom:12px;
+
+border-radius:4px;
+
+font-size:14px;
+
+outline:none;
+
+transition:.3s;
+
+color:#666;
+
+}
+
+.vocation-contact-form input:focus,
+.vocation-contact-form select:focus,
+.vocation-contact-form textarea:focus{
+
+border-color:#002d72;
+
+box-shadow:0 0 0 3px rgba(0,45,114,.08);
+
+}
+
+.form-select-field{
+
+height:48px;
+
+}
+/** new section vocation**/
+/* Vocation Section */
+
+.vocation-contact-section {
+    background: #f8fbff;
+}
+
+.vocation-intro-row {
+    padding-bottom: 30px;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #002d72;
+    margin: 15px 0 20px;
+}
+
+.section-description {
+    max-width: 620px;
+    font-size: 17px;
+    line-height: 1.9;
+    color: #666;
+}
+
+.small-text {
+    display: inline-block;
+    background: #f4f8ff;
+    color: #002d72;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+/* Mary Animated Card */
+
+.mary-vocation-card {
+    position: relative;
+    max-width: 420px;
+    margin: auto;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 25px;
+    box-shadow: 0 20px 45px rgba(0, 45, 114, 0.14);
+    animation: maryFloat 5s ease-in-out infinite;
+}
+
+.mary-vocation-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: contain;
+    position: relative;
+    z-index: 2;
+}
+
+.mary-glow {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    background: rgba(255, 153, 0, 0.2);
+    border-radius: 50%;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    filter: blur(20px);
+    z-index: 1;
+}
+
+.mary-card-content {
+    position: relative;
+    z-index: 3;
+    background: #002d72;
+    color: #fff;
+    padding: 22px;
+    border-radius: 22px;
+    text-align: center;
+}
+
+.mary-card-content h4 {
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.mary-card-content p {
+    margin-bottom: 0;
+    color: #e6e6e6;
+}
+
+@keyframes maryFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* Form + Map Box */
+
+.vocation-contact-box {
+    background: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+.vocation-contact-form {
+    padding: 55px 40px;
+}
+
+.form-heading {
+    color: #002d72;
+    font-size: 34px;
+    font-weight: 800;
+    margin: 12px 0 15px;
+}
+
+.form-intro {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.vocation-contact-form input,
+.vocation-contact-form select,
+.vocation-contact-form textarea {
+    width: 100%;
+    height: 48px;
+    border: 1px solid rgba(0, 45, 114, 0.18);
+    background: transparent;
+    padding: 12px 15px;
+    margin-bottom: 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    color: #555;
+    transition: 0.35s;
+}
+
+.vocation-contact-form textarea {
+    height: auto;
+    min-height: 120px;
+    resize: none;
+}
+
+.vocation-contact-form input:focus,
+.vocation-contact-form select:focus,
+.vocation-contact-form textarea:focus {
+    border-color: #ff9900;
+    box-shadow: 0 0 0 4px rgba(255, 153, 0, 0.12);
+}
+
+.vocation-contact-form button {
+    background: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: 0.35s;
+    box-shadow: 0 8px 20px rgba(255, 153, 0, 0.28);
+}
+
+.vocation-contact-form button:hover {
+    background: #002d72;
+    transform: translateY(-3px);
+}
+
+.vocation-map {
+    height: 620px;
+}
+
+.vocation-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+
+/* Responsive */
+
+@media (max-width: 991px) {
+    .section-title {
+        font-size: 36px;
+    }
+
+    .mary-vocation-card {
+        margin-top: 40px;
+    }
+
+    .vocation-contact-form {
+        padding: 35px 25px;
+    }
+
+    .vocation-map {
+        height: 400px;
+    }
+}
+
+/*  for more informtionn button for vocation)*/
+
+.more-info-btn{
+
+display:inline-block;
+
+background:#ff9900;
+
+color:#fff;
+
+padding:12px 32px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-size:14px;
+
+font-weight:700;
+
+transition:.35s;
+
+box-shadow:0 8px 20px rgba(255,153,0,.25);
+
+}
+
+.more-info-btn:hover{
+
+background:#002d72;
+
+transform:translateY(-3px);
+
+color:#fff;
+
+}
