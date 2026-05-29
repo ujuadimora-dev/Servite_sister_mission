@@ -2,26 +2,67 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servite Sisters Mission</title>
+
+  <title>Servite Mission Sisters</title>
+
+  <!-- Favicon -->
+
+  <link rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="./assets/images/favicon-32x32.png">
+
+  <link rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="./assets/images/favicon-16x16.png">
+
+  <link rel="apple-touch-icon"
+        sizes="180x180"
+        href="./assets/images/apple-touch-icon.png">
+
+  <link rel="shortcut icon"
+        href="./assets/images/favicon.ico">
+
+  <!-- CSS -->
+
   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
   <link href="./assets/icons/fontawesome/css/fontawesome.min.css" rel="stylesheet">
   <link href="./assets/icons/fontawesome/css/brands.min.css" rel="stylesheet">
   <link href="./assets/icons/fontawesome/css/solid.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/plugin/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="./assets/plugin/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
-  <link rel="stylesheet" href="./assets/plugin/aos/aos.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <link rel="stylesheet"
+        href="./assets/plugin/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+
+  <link rel="stylesheet"
+        href="./assets/plugin/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">
+
+  <link rel="stylesheet"
+        href="./assets/plugin/aos/aos.css">
+
+  <link rel="stylesheet"
+        href="./assets/css/style.css">
+
 </head>
 
 <body>
+  <!-- Page Loader -->
+<div id="page-loader">
+  <div class="loader-content">
+    <i class="fas fa-praying-hands"></i>
+    <p>Loading...</p>
+  </div>
+</div>
   <div class="header-section">
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div class="container-fluid container-xl position-relative d-flex align-items-center">
         <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <img src="assets/images/servite.sister.logo.png" alt="Servite Mission Sisters Logo"
-            style="height:70px !important; max-height:none !important; width:auto;">
+          <img src="assets/images/logo.servsister.png" alt="Servite Mission Sisters Logo"
+            style="height:100px !important; max-height:none !important; width:auto;">
         </a>
         <nav id="navmenu" class="navmenu">
           <ul>
@@ -1068,6 +1109,16 @@
     <script src="./assets/plugin/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
     <script src="./assets/plugin/aos/aos.js"></script>
     <script src="./assets/js/main.js"></script>
+
+    <script>
+  window.addEventListener("load", function () {
+    const loader = document.getElementById("page-loader");
+
+    setTimeout(function () {
+      loader.classList.add("hide");
+    }, 800);
+  });
+</script>
 </body>
 
 </html>

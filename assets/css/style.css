@@ -31,6 +31,58 @@ a {
   text-decoration: none;
 }
 
+/* Page Loader */
+
+#page-loader{
+  position:fixed;
+  inset:0;
+  background:#002d72;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:99999;
+  transition:opacity .6s ease, visibility .6s ease;
+}
+
+.loader-content{
+  text-align:center;
+  color:white;
+}
+
+.loader-content i{
+  font-size:90px;
+  color:#ff9900;
+  animation:prayPulse 1.5s infinite ease-in-out;
+}
+
+.loader-content p{
+  margin-top:20px;
+  font-size:18px;
+  letter-spacing:2px;
+}
+
+#page-loader.hide{
+  opacity:0;
+  visibility:hidden;
+}
+
+@keyframes prayPulse{
+  0%{
+    transform:scale(1);
+    opacity:.7;
+  }
+
+  50%{
+    transform:scale(1.18);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(1);
+    opacity:.7;
+  }
+}
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
