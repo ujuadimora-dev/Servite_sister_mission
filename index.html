@@ -205,75 +205,86 @@
       <!-- Cards Section -->
       <div class="row g-4 mt-5">
 
+        <!-- Card 1 -->
         <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up">
           <div class="modern-hover-card">
-            <img src="./assets/images/abt.bgr.png" alt="Our Charism">
+            <img src="./assets/images/abt.bgr.png" alt="Our Identity">
 
             <div class="modern-card-overlay">
               <h3>Our Identity</h3>
               <p>
-
-
                 Servite Mission Sisters in the African Region are part of the International
-                Servite Secular Institute of the Servants of Mary,
-                a consecrated institute of pontifical right approved by the Church...</p>
-              <a href="more-info.html" class="card-more-btn">Click for More</a>
+                Servite Secular Institute...
+              </p>
+
+              <button class="card-more-btn"
+                onclick="openInfoModal('Our Identity',
+          'Servite Mission Sisters in the African Region are part of the International Servite Secular Institute of the Servants of Mary, a consecrated institute of pontifical right approved by the Church. We live our consecration fully within society through prayer, service, witness, and mission while remaining faithful to the charism and spirituality of the Servite Family.')">
+                Read More
+              </button>
             </div>
           </div>
         </div>
 
+        <!-- Card 2 -->
         <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
           <div class="modern-hover-card">
-            <img src="./assets/images/abt.bagr.png" alt="Our Vocation">
+            <img src="./assets/images/abt.bagr.png" alt="Our Way of Life">
 
             <div class="modern-card-overlay">
               <h3>Our Way of Life</h3>
               <p>
+                Our way of life is rooted in our consecration to God and expressed through service...
+              </p>
 
-                Our way of life is rooted in our consecration to God and expressed through
-                service. We are women of prayer, living our vocation with commitment and responsibility within society
-                ...</p>
-              <a href="more-info.html" class="card-more-btn">Click for More</a>
+              <button class="card-more-btn"
+                onclick="openInfoModal('Our Way of Life',
+          'We are women of prayer living our vocation with commitment and responsibility within society. Our life is expressed through prayer, service, professional engagement, community participation, and faithfulness in daily responsibilities. Some live individually while others live in small communities according to the life and structure of the Institute.')">
+                Read More
+              </button>
             </div>
           </div>
         </div>
 
+        <!-- Card 3 -->
         <div class="col-12 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
           <div class="modern-hover-card">
-            <img src="./assets/images/abt.bgr2.png" alt="Our Community">
+            <img src="./assets/images/abt.bgr2.png" alt="SMS Spirituality">
 
             <div class="modern-card-overlay">
-
-              <h3>
-                SMS Spirituality
-              </h3>
-
+              <h3>SMS Spirituality</h3>
               <p>
-
-                The spirituality of the Servite Mission Sisters is rooted in the tradition of the
-
-                <span style="color:#ff8c00; font-weight:700;">
-
-                  Servite Order
-
-                </span>.
-
-                It is a Marian path inspired by the Blessed Virgin Mary under the title of Our Lady of Sorrows.
-
+                Rooted in the Servite tradition and inspired by Our Lady of Sorrows.
               </p>
 
-              <a href="more-info.html" class="card-more-btn">
-
-                Click for More
-
-              </a>
-
-            </div>>
+              <button class="card-more-btn"
+                onclick="openInfoModal('SMS Spirituality',
+          'The spirituality of the Servite Mission Sisters is rooted in the tradition of the Servite Order. Inspired by the Blessed Virgin Mary under the title of Our Lady of Sorrows, we are called to remain steadfast in faith, stand firm in times of difficulty, and accompany others with compassion and hope.')">
+                Read More
+              </button>
+            </div>
           </div>
         </div>
 
       </div>
 
+
+      <!-- Floating Info Modal -->
+      <div id="infoModal" class="info-modal">
+        <div class="info-modal-card">
+          <button class="info-close-btn" onclick="closeInfoModal()">
+            &times;
+          </button>
+
+          <div class="info-icon">
+            <i class="fas fa-praying-hands"></i>
+          </div>
+
+          <h3 id="infoModalTitle"></h3>
+
+          <p id="infoModalText"></p>
+        </div>
+      </div>
       <!-- Text + Video Section -->
       <div class="row align-items-center g-5 mt-5">
 
@@ -301,24 +312,86 @@
 
           <div class="about-blog-read-more mt-4">
 
-    <a href="more-info.html"
-       class="custom-learn-btn">
+            <button class="custom-learn-btn" onclick="openMissionModal()">
 
-        Learn More about our Mission
+              Learn More about our Mission
 
-    </a>
+            </button>
 
-</div>
+            <div id="missionModal" class="mission-modal">
+
+              <div class="mission-modal-card">
+
+                <button class="mission-close-btn" onclick="closeMissionModal()">
+
+                  &times;
+
+                </button>
+
+                <div class="mission-icon">
+
+                  <i class="fas fa-hands-helping"></i>
+
+                </div>
+
+                <h2>
+                  Our Mission
+                </h2>
+
+                <p>
+                  Servite Mission Sisters engage in diverse ministries including
+                  health care, education, business, civil service, and community
+                  engagement, allowing their service to adapt according to
+                  emerging needs and circumstances.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
         </div>
 
         <div class="col-lg-6" data-aos="fade-left">
-          <div class="about-youtube">
-            <img src="./assets/images/bgr.video.png" class="img-fluid rounded-4" alt="Servite Mission Sisters video">
 
-            <div class="youtube-play-btn">
+          <div class="about-youtube">
+
+            <img src="./assets/images/abt.bagr.png" class="img-fluid rounded-4" alt="Servite Mission Sisters Video">
+
+            <!-- Play Button -->
+
+            <div class="play-btn" data-bs-toggle="modal" data-bs-target="#videoModal">
+
               <i class="fas fa-play"></i>
+
             </div>
+
           </div>
+
+        </div>
+
+
+        <!-- VIDEO MODAL -->
+
+        <div class="modal fade" id="videoModal" tabindex="-1">
+
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content border-0 bg-transparent">
+
+              <button type="button" class="btn-close btn-close-white ms-auto mb-2" data-bs-dismiss="modal">
+              </button>
+
+              <video controls class="w-100 rounded-4" id="serviteVideo">
+
+                <source src="./assets/images/servite.clip.mp4" type="video/mp4">
+
+              </video>
+
+            </div>
+
+          </div>
+
         </div>
 
       </div>
@@ -331,37 +404,55 @@
 
       <!-- Main Heading -->
       <div class="text-center mb-5" data-aos="fade-up">
-        <span class="small-text">DISCOVER YOUR CALLING</span>
 
-        <h2 class="vocation-big-title">Vocation</h2>
+        <span class="small-text">
+          DISCOVER YOUR CALLING
+        </span>
+
+        <h2 class="vocation-big-title">
+          Vocation
+        </h2>
 
         <p class="vocation-main-text">
           Each vocation is a unique way of giving one’s life to God through prayer,
           service, mission, and faithful witness in society.
         </p>
+
       </div>
 
-      <!-- Intro Image Cards -->
+
+      <!-- Vocation Image + Text -->
       <div class="row align-items-center g-5 mb-5 vocation-intro-feature">
 
-        <!-- Left Image -->
-        <div class="col-lg-6" data-aos="fade-left">
-          <div class="about-youtube">
-            <img src="./assets/images/abt.bgr2.png" class="img-fluid rounded-4" alt="Servite Mission Sisters video">
+        <!-- Left Image / Video -->
+        <div class="col-lg-6" data-aos="fade-right">
 
-            
+          <div class="about-youtube">
+
+            <img src="./assets/images/abt.bgr2.png" class="img-fluid rounded-4" alt="Servite Mission Sisters Video">
+
+            <div class="play-btn" data-bs-toggle="modal" data-bs-target="#missionVideoModal">
+
+              <i class="fas fa-play"></i>
+
+            </div>
+
           </div>
+
         </div>
+
 
         <!-- Right Text -->
         <div class="col-lg-6" data-aos="fade-left">
+
           <div class="vocation-feature-content">
 
-            <span class="small-text">A LIFE GIVEN TO GOD</span>
+            <span class="small-text">
+              A LIFE GIVEN TO GOD
+            </span>
 
             <h3 class="vocation-sub-title">
-              Our<span style="color:#ff8c00;"> Vocation</span>
-
+              Our <span style="color:#ff8c00;">Vocation</span>
             </h3>
 
             <ul class="vocation-bullet-list">
@@ -377,297 +468,341 @@
               </li>
 
               <li>
-                We seek to bring the light of Christ into the realities of everyday life
-                through compassionate witness and service.
+                We seek to bring the light of Christ into everyday life through compassionate witness and service.
               </li>
 
               <li>
-                We welcome those who feel drawn to explore this way of life and discern
-                whether God may be calling them to this vocation.
+                We welcome those who feel drawn to explore this way of life and discern whether God may be calling them.
               </li>
 
             </ul>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Mission Video Modal -->
+      <div class="modal fade" id="missionVideoModal" tabindex="-1" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+          <div class="modal-content border-0 bg-transparent">
+
+            <button type="button" class="btn-close btn-close-white ms-auto mb-2" data-bs-dismiss="modal">
+            </button>
+
+            <video controls class="w-100 rounded-4" id="missionVideo">
+
+              <source src="./assets/images/mary-proff.mp4" type="video/mp4">
+
+            </video>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Right Text -->
+
+
+      <!-- Discernment Section -->
+      <div class="row align-items-center g-5 mb-5">
+
+        <div class="col-lg-6" data-aos="fade-right">
+          <h3 class="vocation-sub-title">Discernment</h3>
+
+          <p class="section-description text-start">
+            Discernment is a journey of prayerfully seeking God’s will and listening
+            attentively to His call.
+          </p>
+
+          <ul class="vocation-check-list">
+            <li>Pray regularly</li>
+            <li>Participate in the sacramental life of the Church</li>
+            <li>Learn about the Institute and its mission</li>
+            <li>Seek spiritual guidance where appropriate</li>
+            <li>Reflect with sincerity and openness</li>
+          </ul>
+
+          <a href="vocation.html" class="more-info-btn">
+            Learn More About Discernment
+          </a>
+        </div>
+
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="discernment-image-box">
+            <img src="./assets/images/welfare.Mary.png" alt="Discernment">
           </div>
         </div>
 
       </div>
-      <div class="row align-items-center g-5 mb-5 vocation-intro-feature">
 
 
+      <div class="formation-section py-5">
 
-        <!-- Right Text -->
+        <h3 class="vocation-sub-title text-center mb-3">
+          Journey of <span style="color:#ff8c00;">Formation</span>
+        </h3>
+
+        <p class="formation-subheading text-center mx-auto mb-5">
+          Formation is a gradual process of spiritual growth, maturity,
+          and deeper understanding of the vocation and mission.
+        </p>
+
+        <div class="row g-4">
+
+          <!-- Stage One -->
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in">
+            <div class="formation-card">
+              <div class="formation-icon">
+                <i class="fas fa-seedling"></i>
+              </div>
+
+              <span>Stage One</span>
+
+              <h4>Candidacy</h4>
+
+              <p>
+                1–2 years of introduction, discernment,
+                and initial formation.
+              </p>
+
+              <div class="progress formation-progress">
+                <div class="progress-bar" style="width:35%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage Two -->
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="150">
+            <div class="formation-card active">
+              <div class="formation-icon">
+                <i class="fas fa-book-open"></i>
+              </div>
+
+              <span>Stage Two</span>
+
+              <h4>Formation Period</h4>
+
+              <p>
+                2–3 years of deeper growth, commitment,
+                and integration into daily life.
+              </p>
+
+              <div class="progress formation-progress">
+                <div class="progress-bar" style="width:70%;"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stage Three -->
+          <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="formation-card">
+              <div class="formation-icon">
+                <i class="fas fa-cross"></i>
+              </div>
+
+              <span>Stage Three</span>
+
+              <h4>Profession</h4>
+
+              <p>
+                A formal commitment to God through poverty,
+                chastity, and obedience.
+              </p>
+
+              <div class="progress formation-progress">
+                <div class="progress-bar" style="width:100%;"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Single Button -->
+
+        <div class="text-center mt-5">
+
+          <a href="vocation.html" class="btn btn-outline-secondary rounded-5 py-3 px-4 btn-hover">
+
+            Learn More About Formation
+
+          </a>
+
+        </div>
+
+      </div>
+      <!-- Servite Family Section -->
+      <div class="servite-family-section py-5">
+
+        <div class="row align-items-center g-5">
+
+          <!-- Left Family List -->
+          <div class="col-lg-5" data-aos="fade-right">
+            <span class="small-text">UNITED IN ONE CHARISM</span>
+
+            <h3 class="vocation-sub-title">Servite<span style="color:#ff8c00;">Family</span></h3>
 
 
-        <!-- Discernment Section -->
-        <div class="row align-items-center g-5 mb-5">
-
-          <div class="col-lg-6" data-aos="fade-right">
-            <h3 class="vocation-sub-title">Discernment</h3>
 
             <p class="section-description text-start">
-              Discernment is a journey of prayerfully seeking God’s will and listening
-              attentively to His call.
+              The Servite Family is made up of different vocations,
+              each living the same spiritual heritage and mission
+              in unique but complementary ways.
             </p>
 
-            <ul class="vocation-check-list">
-              <li>Pray regularly</li>
-              <li>Participate in the sacramental life of the Church</li>
-              <li>Learn about the Institute and its mission</li>
-              <li>Seek spiritual guidance where appropriate</li>
-              <li>Reflect with sincerity and openness</li>
-            </ul>
+            <div class="family-list text-start">
 
-            <a href="more-info.html" class="more-info-btn">
-              Learn More About Discernment
-            </a>
+              <div class="family-item">
+                <i class="fas fa-cross" style="color:#0056d6;"></i>
+                <h5>Friars</h5>
+              </div>
+
+              <div class="family-item">
+                <i class="fas fa-church" style="color:#8e44ad;"></i>
+                <h5>Monks</h5>
+              </div>
+
+              <div class="family-item">
+                <i class="fas fa-praying-hands" style="color:#ff8c00;"></i>
+                <h5>Contemplative Sisters</h5>
+              </div>
+
+              <div class="family-item">
+                <i class="fas fa-hands-helping" style="color:#20b486;"></i>
+                <h5>Apostolic Sisters</h5>
+              </div>
+
+              <div class="family-item">
+                <i class="fas fa-users" style="color:#dc3545;"></i>
+                <h5>Secular Institute Sisters</h5>
+              </div>
+
+              <div class="family-item">
+                <i class="fas fa-heart" style="color:#fd7e14;"></i>
+                <h5>Lay Servite Members</h5>
+              </div>
+
+            </div>
           </div>
 
-          <div class="col-lg-6" data-aos="fade-left">
-            <div class="discernment-image-box">
-              <img src="./assets/images/welfare.Mary.png"  alt="Discernment">
-            </div>
-          </div>
+          <!-- Right Carousel -->
+          <div class="col-lg-7" data-aos="fade-left">
 
-        </div>
+            <div class="testimonial-carousel owl-carousel owl-theme">
 
-
-        <div class="formation-section py-5">
-
-          <h3 class="vocation-sub-title text-center mb-3">
-            Journey of <span style="color:#ff8c00;">Formation</span>
-          </h3>
-
-          <p class="formation-subheading text-center mx-auto mb-5">
-            Formation is a gradual process of spiritual growth, maturity,
-            and deeper understanding of the vocation and mission.
-          </p>
-
-          <div class="row g-4">
-
-            <!-- Stage One -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in">
-              <div class="formation-card">
-                <div class="formation-icon">
-                  <i class="fas fa-seedling"></i>
+              <div class="testimonial-slide">
+                <div class="testimonial-bg-img">
+                  <img src="./assets/images/first.order.jpg" alt="Friars">
                 </div>
 
-                <span>Stage One</span>
+                <div class="testimonial-content">
+                  <h4>✝️ Servite Friars (First Order)</h4>
+                  <p>
 
-                <h4>Candidacy</h4>
+                    Religious men who live the Servite vocation through community life,
+                    prayer, pastoral ministry, preaching, and service to the Church.
 
-                <p>
-                  1–2 years of introduction, discernment,
-                  and initial formation.
-                </p>
-
-                <div class="progress formation-progress">
-                  <div class="progress-bar" style="width:35%;"></div>
+                  </p>
                 </div>
               </div>
-            </div>
 
-            <!-- Stage Two -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="150">
-              <div class="formation-card active">
-                <div class="formation-icon">
-                  <i class="fas fa-book-open"></i>
+              <div class="testimonial-slide">
+                <div class="testimonial-bg-img">
+                  <img src="./assets/images/frier.jpg" alt="Monks">
                 </div>
 
-                <span>Stage Two</span>
-
-                <h4>Formation Period</h4>
-
-                <p>
-                  2–3 years of deeper growth, commitment,
-                  and integration into daily life.
-                </p>
-
-                <div class="progress formation-progress">
-                  <div class="progress-bar" style="width:70%;"></div>
+                <div class="testimonial-content">
+                  <h4>⛪ Monks</h4>
+                  <p>
+                    Men dedicated to a life of prayer,
+                    contemplation, and monastic community.
+                  </p>
                 </div>
               </div>
-            </div>
 
-            <!-- Stage Three -->
-            <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-              <div class="formation-card">
-                <div class="formation-icon">
-                  <i class="fas fa-cross"></i>
+              <div class="testimonial-slide">
+                <div class="testimonial-bg-img">
+                  <img src="./assets/images/complative.jpg" alt="Contemplative Sisters">
                 </div>
 
-                <span>Stage Three</span>
+                <div class="testimonial-content">
+                  <h4>🙏 Servite Nuns (Contemplative Branch)</h4>
+                  <p>
 
-                <h4>Profession</h4>
-
-                <p>
-                  A formal commitment to God through poverty,
-                  chastity, and obedience.
-                </p>
-
-                <div class="progress formation-progress">
-                  <div class="progress-bar" style="width:100%;"></div>
+                    Contemplative women dedicated primarily to prayer, silence,
+                    and a hidden life centred on God within the monastic tradition of the Servite Order.
+                  </p>
                 </div>
               </div>
-            </div>
 
-          </div>
-
-          <!-- Single Button -->
-
-          <div class="text-center mt-5">
-
-            <a href="more-info.html#formation" class="btn btn-outline-secondary rounded-5 py-3 px-4 btn-hover">
-
-              Learn More About Formation
-
-            </a>
-
-          </div>
-
-        </div>
-        <!-- Servite Family Section -->
-        <div class="servite-family-section py-5">
-
-          <div class="row align-items-center g-5">
-
-            <!-- Left Family List -->
-            <div class="col-lg-5" data-aos="fade-right">
-              <span class="small-text">UNITED IN ONE CHARISM</span>
-
-              <h3 class="vocation-sub-title">Servite<span style="color:#ff8c00;">Family</span></h3>
-
-
-
-              <p class="section-description text-start">
-                The Servite Family is made up of different vocations,
-                each living the same spiritual heritage and mission
-                in unique but complementary ways.
-              </p>
-
-              <div class="family-list text-start">
-
-                <div class="family-item">
-                  <i class="fas fa-cross" style="color:#0056d6;"></i>
-                  <h5>Friars</h5>
+              <div class="testimonial-slide">
+                <div class="testimonial-bg-img">
+                  <img src="./assets/images/appolistic.sister.jpg" alt="Apostolic Sisters">
                 </div>
 
-                <div class="family-item">
-                  <i class="fas fa-church" style="color:#8e44ad;"></i>
-                  <h5>Monks</h5>
+                <div class="testimonial-content">
+                  <h4>🤝 Apostolic Sisters</h4>
+                  <p>
+                    Women serving through education,
+                    healthcare, and missionary outreach.
+                  </p>
                 </div>
-
-                <div class="family-item">
-                  <i class="fas fa-praying-hands" style="color:#ff8c00;"></i>
-                  <h5>Contemplative Sisters</h5>
-                </div>
-
-                <div class="family-item">
-                  <i class="fas fa-hands-helping" style="color:#20b486;"></i>
-                  <h5>Apostolic Sisters</h5>
-                </div>
-
-                <div class="family-item">
-                  <i class="fas fa-users" style="color:#dc3545;"></i>
-                  <h5>Secular Institute Sisters</h5>
-                </div>
-
-                <div class="family-item">
-                  <i class="fas fa-heart" style="color:#fd7e14;"></i>
-                  <h5>Lay Servite Members</h5>
-                </div>
-
               </div>
-            </div>
 
-            <!-- Right Carousel -->
-            <div class="col-lg-7" data-aos="fade-left">
 
-              <div class="testimonial-carousel owl-carousel owl-theme">
-
-                <div class="testimonial-slide">
-                  <div class="testimonial-bg-img">
-                    <img src="./assets/images/frier.jpg" alt="Friars">
-                  </div>
-
-                  <div class="testimonial-content">
-                    <h4>✝️ Friars</h4>
-                    <p>
-                      Men living their vocation in community through priesthood,
-                      brotherhood, and pastoral ministry.
-                    </p>
-                  </div>
+              <div class="testimonial-slide">
+                <div class="testimonial-bg-img">
+                  <img src="./assets/images/active.servite.jpg" alt="active group Sisters">
                 </div>
 
-                <div class="testimonial-slide">
-                  <div class="testimonial-bg-img">
-                    <img src="./assets/images/monk.jpg" alt="Monks">
-                  </div>
+                <div class="testimonial-content">
+                  <h4>👥 Servite Sisters (Active Religious Congregations)</h4>
+                  <p>
+                    Women religious who live the Servite charism through apostolic
+                    works such as education,
+                    healthcare, pastoral ministry, social outreach,
+                    and other forms of service.
 
-                  <div class="testimonial-content">
-                    <h4>⛪ Monks</h4>
-                    <p>
-                      Men dedicated to a life of prayer,
-                      contemplation, and monastic community.
-                    </p>
-                  </div>
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="testimonial-slide">
+                <div class="testimonial-bg-img">
+                  <img src="./assets/images/abt.bagr.png" alt="Secular Institute Sisters">
                 </div>
 
-                <div class="testimonial-slide">
-                  <div class="testimonial-bg-img">
-                    <img src="./assets/images/complative.jpg" alt="Contemplative Sisters">
-                  </div>
+                <div class="testimonial-content">
+                  <h4>👥 Servite Secular Institute (Servants of Mary)
+                  </h4>
+                  <p>
+                    Consecrated women who live the Servite charism within society
+                    and among the people through prayer, consecration, professional
+                    engagement, apostolic service, and Christian witness.
+                    The Servite Mission Sisters are the African Regional expression of this form of consecrated life.
+                  </p>
+                </div>
+              </div>
 
-                  <div class="testimonial-content">
-                    <h4>🙏 Contemplative Sisters</h4>
-                    <p>
-                      Women dedicated to silence, prayer,
-                      and contemplation in community.
-                    </p>
-                  </div>
+              <div class="testimonial-slide">
+                <div class="testimonial-bg-img">
+                  <img src="./assets/images/secular.group.jpg" alt="Lay Servite Members">
                 </div>
 
-                <div class="testimonial-slide">
-                  <div class="testimonial-bg-img">
-                    <img src="./assets/images/abt.bagr.png" alt="Apostolic Sisters">
-                  </div>
-
-                  <div class="testimonial-content">
-                    <h4>🤝 Apostolic Sisters</h4>
-                    <p>
-                      Women serving through education,
-                      healthcare, and missionary outreach.
-                    </p>
-                  </div>
+                <div class="testimonial-content">
+                  <h4>❤️ Lay Servite Order / Secular Order</h4>
+                  <p>
+                    Lay Servite Order / Secular Order
+                    Lay men and women who live the Servite spirituality according to their state of
+                    life while remaining fully engaged in family, professional, and social responsibilities.
+                  </p>
                 </div>
-
-                <div class="testimonial-slide">
-                  <div class="testimonial-bg-img">
-                    <img src="./assets/images/secular.group.jpg" alt="Secular Institute Sisters">
-                  </div>
-
-                  <div class="testimonial-content">
-                    <h4>👥 Secular Institute Sisters</h4>
-                    <p>
-                      Women living their vocation within society
-                      through witness and service.
-                    </p>
-                  </div>
-                </div>
-
-                <div class="testimonial-slide">
-                  <div class="testimonial-bg-img">
-                    <img src="./assets/images/lay.servite.jpg" alt="Lay Servite Members">
-                  </div>
-
-                  <div class="testimonial-content">
-                    <h4>❤️ Lay Servite Members</h4>
-                    <p>
-                      Men and women living Servite spirituality
-                      in family and professional life.
-                    </p>
-                  </div>
-                </div>
-
               </div>
 
             </div>
@@ -676,76 +811,88 @@
 
         </div>
 
+      </div>
 
-        <!-- Form + Map -->
-        <div class="row align-items-center g-0 vocation-contact-box mt-5">
 
-          <!-- Left Form -->
-          <div class="col-lg-5">
+      <!-- Form + Map -->
+      <div class="row align-items-center g-0 vocation-contact-box mt-5">
 
-            <div class="vocation-contact-form">
+        <!-- Left Form -->
+        <div class="col-lg-5">
 
-              <span class="small-text">JOIN US</span>
+          <div class="vocation-contact-form">
 
-              <h3 class="form-heading">Vocation<span style="color:#ff8c00;">Inquiry</span></h3>
+            <span class="small-text">JOIN US</span>
 
-              <p class="form-intro">
-                If you are discerning a call and would like to learn more,
-                you are welcome to make contact. All enquiries are treated with care and confidentiality.
-              </p>
+            <h3 class="form-heading">Vocation<span style="color:#ff8c00;">Inquiry</span></h3>
 
-              <form action="https://formspree.io/f/YOURFORMID" method="POST">
+            <p class="form-intro">
+              If you are discerning a call and would like to learn more,
+              you are welcome to make contact. All enquiries are treated with care and confidentiality.
+            </p>
+            <form id="vocationForm">
 
-                <input type="text" name="fullname" placeholder="Full Name" required>
+              <input type="text" name="fullname" placeholder="Full Name" required>
 
-                <input type="email" name="email" placeholder="Email Address" required>
+              <input type="email" name="email" placeholder="Email Address" required>
 
-                <input type="tel" name="phone" placeholder="Phone Number (Optional)">
+              <input type="tel" name="phone" placeholder="Phone Number (Optional)">
 
-                <div class="row">
+              <div class="row">
 
-                  <div class="col-md-6 mb-3">
-                    <select name="age" class="form-select-field" required>
-                      <option value="">Select Age Range</option>
-                      <option value="10-15">10 - 15</option>
-                      <option value="16-20">16 - 20</option>
-                      <option value="21-25">21 - 25</option>
-                      <option value="26-30">26 - 30</option>
-                      <option value="31-35">31 - 35</option>
-                      <option value="36-40">36 - 40</option>
-                      <option value="41-45">41 - 45</option>
-                      <option value="46-50">46 - 50</option>
-                      <option value="51-55">51 - 55</option>
-                      <option value="Others">Others</option>
-                    </select>
-                  </div>
+                <div class="col-md-6 mb-3">
 
-                  <div class="col-md-6 mb-3">
-                    <input type="text" name="country" placeholder="Country of Residence">
-                  </div>
+                  <select name="age" class="form-select-field" required>
+
+                    <option value="">Select Age Range</option>
+                    <option value="10-15">10 - 15</option>
+                    <option value="16-20">16 - 20</option>
+                    <option value="21-25">21 - 25</option>
+                    <option value="26-30">26 - 30</option>
+                    <option value="31-35">31 - 35</option>
+                    <option value="36-40">36 - 40</option>
+                    <option value="41-45">41 - 45</option>
+                    <option value="46-50">46 - 50</option>
+                    <option value="51-55">51 - 55</option>
+                    <option value="Others">Others</option>
+
+                  </select>
 
                 </div>
 
-                <textarea name="message" rows="4" placeholder="Tell us about yourself and why you feel called..."
-                  required></textarea>
+                <div class="col-md-6 mb-3">
 
-                <button type="submit">Send Inquiry</button>
+                  <input type="text" name="country" placeholder="Country of Residence">
 
-              </form>
+                </div>
 
-            </div>
+              </div>
 
-          </div>
+              <textarea name="message" rows="5" placeholder="Tell us about yourself and why you feel called..."
+                required></textarea>
 
-          <!-- Right Map -->
-          <div class="col-lg-7">
-            <div class="vocation-map">
-              <iframe src="https://maps.google.com/maps?q=Africa&t=&z=3&ie=UTF8&iwloc=&output=embed" loading="lazy">
-              </iframe>
-            </div>
+              <button type="submit" class="vocation-submit-btn">
+
+                Send Inquiry
+
+              </button>
+
+              <div id="formStatus"></div>
+
+            </form>
           </div>
 
         </div>
+
+        <!-- Right Map -->
+        <div class="col-lg-7">
+          <div class="vocation-map">
+            <iframe src="https://maps.google.com/maps?q=Africa&t=&z=3&ie=UTF8&iwloc=&output=embed" loading="lazy">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
 
     </section>
     <div id="welfare"
@@ -765,7 +912,7 @@
 
             <div class="text-center mt-4">
 
-              <a href="more-info.html#welfare" class="btn btn-outline-secondary rounded-5 py-3 px-4 btn-hover">
+              <a href="welfare.html" class="btn btn-outline-secondary rounded-5 py-3 px-4 btn-hover">
 
                 Learn More About Welfare
 
@@ -812,16 +959,12 @@
               </span>
             </li>
 
-
           </ul>
 
           <div class="mt-5 d-flex flex-wrap gap-3">
             <a href="donate.html" class="btn btn-primary rounded-pill px-5 py-3">
               <i class="fas fa-heart me-2"></i>
               Support Our Mission
-            </a>
-
-
             </a>
           </div>
         </div>
@@ -861,7 +1004,7 @@
 
       <div class="row align-items-center">
         <div class="col-md-6 mb-5 text-start" data-aos="flip-up">
-          <img src="./assets/images/welfare.help.png" class="img-fluid rounded-4" alt="Welfare Support">
+          <img src="./assets/images/help.bgrd.png" class="img-fluid rounded-4" alt="Welfare Support">
         </div>
 
         <div class="col-md-6 mb-5 d-flex align-items-center" data-aos="flip-down">
@@ -898,9 +1041,8 @@
 
             <div class="card border-0 bg-transparent text-start pe-lg-5">
 
-              <p class="our-feature-sub-title">
-                Supporting
-                <span class="text-secondary">Education</span>
+              <p class="our-feature-sub-title">Supporting
+                <span class="text-secondary"> Education</span>
               </p>
 
               <p class="text-quaternary">
@@ -918,10 +1060,6 @@
 
                   <i class="fas fa-heart me-2"></i>
                   Support Our Mission
-
-                </a>
-
-
 
                 </a>
 
@@ -943,13 +1081,13 @@
 
         <div class="row">
           <div class="col-md-6 mb-5 text-start" data-aos="zoom-in-down">
-            <img src="./assets/images/welfare.communty.png" class="card-img" alt="Instructor">
+            <img src="./assets/images/comuntiy.bgr.png" class="card-img" alt="Instructor">
           </div>
 
           <div class="col-md-6 mb-5 d-flex align-items-center justify-content-center" data-aos="zoom-in-left">
             <div class="card border-0 text-start pe-5">
               <p class="our-feature-sub-title">
-                Communitiy<br>
+                Communitiy
                 <span class="text-secondary">Service</span>
               </p>
 
@@ -960,170 +1098,309 @@
               </p>
 
               <div class="mt-4 d-flex flex-wrap gap-3">
-                <a href="donate.html" class="btn btn-primary rounded-pill px-4 py-3" >
+                <a href="donate.html" class="btn btn-primary rounded-pill px-4 py-3">
                   <i class="fas fa-heart me-2"></i>
                   Support Our Mission
-                </a>
-
-
-
                 </a>
               </div>
             </div>
           </div>
         </div>
-
-
-
       </div>
 
 
-<footer class="footer py-5" id="contact">
-    <div class="container">
-
-        <div class="row g-5 align-items-start">
-
-            <!-- About -->
-            <div class="col-lg-3 col-md-6">
-                <h4 class="footer-title">Servite Mission Sisters</h4>
-
-                <p class="footer-sub-title">
-                    Simplicity and Sacrifice
-                </p>
-
-                <div class="footer-mission">
-                    <h6>
-                        <i class="fas fa-praying-hands me-2"></i>
-                        Prayer in Action
-                    </h6>
-
-                    <p>
-                        We are not set apart from the world, but sent into it through prayer,
-                        service, and witness.
-                    </p>
-                </div>
-            </div>
-
-
-            <!-- Quick Links -->
-            <div class="col-lg-2 col-md-6">
-                <h5 class="footer-heading">Quick Links</h5>
-
-                <ul class="footer-menu list-unstyled">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#about">Who We Are</a></li>
-                    <li><a href="#vocation">Vocation</a></li>
-                    <li><a href="#welfare">Welfare</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-
-
-            <!-- Gallery -->
-            <div class="col-lg-4 col-md-6">
-                <h5 class="footer-heading">Mission Gallery</h5>
-
-                <div class="footer-gallery">
-                    <img src="./assets/images/header-bg.png"
-                         onclick="openImage(this.src)"
-                         alt="Servite Mission Sisters">
-
-                    <img src="./assets/images/abt.bgr.png"
-                         onclick="openImage(this.src)"
-                         alt="Mission Work">
-
-                    <img src="./assets/images/welfare.help.png"
-                         onclick="openImage(this.src)"
-                         alt="Welfare Support">
-
-                    <img src="./assets/images/welfare.education.png"
-                         onclick="openImage(this.src)"
-                         alt="Education Support">
-                </div>
-            </div>
-
-
-            <!-- Newsletter -->
-            <div class="col-lg-3 col-md-6">
-                <h5 class="footer-heading">Newsletter</h5>
-
-                <p class="footer-text">
-                    Subscribe to receive updates on our mission.
-                </p>
-
-                <form class="footer-newsletter">
-                    <input type="email"
-                           class="newsletter-input"
-                           placeholder="Enter email">
-
-                    <button type="submit"
-                            class="subscribe-btn">
-                        Subscribe
-                    </button>
-                </form>
-
-                <div class="social-icons mt-4">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-
-        </div>
-
-        <hr class="footer-line">
-
-        <div class="footer-bottom text-center">
-            <p class="copyright">
-                © 2026 Servite Mission Sisters – African Region of the Servite Secular Institute (Servants of Mary)
-            </p>
-        </div>
-
     </div>
-</footer>
+  </section>
 
+  <!-- =========================
+         FOOTER
+    ========================= -->
 
-<!-- IMAGE MODAL -->
-<div class="modal fade" id="galleryModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-        <div class="modal-content bg-transparent border-0">
+  <footer class="footer" id="contact">
 
-            <button type="button"
-                    class="btn-close btn-close-white ms-auto mb-2"
-                    data-bs-dismiss="modal">
+    <div class="footer-wrapper">
+
+      <div class="row g-5">
+
+        <!-- ABOUT -->
+        <div class="col-lg-3 col-md-6">
+
+          <h2 class="footer-logo">
+            Servite Mission Sisters
+          </h2>
+
+          <p class="footer-tagline">
+            Simplicity and Sacrifice
+          </p>
+
+          <div class="footer-prayer-card">
+
+            <h5>
+              <i class="fas fa-praying-hands me-2"></i>
+              Prayer in Action
+            </h5>
+
+            <p>
+              We are not set apart from the world, but sent into it.
+              Through prayer, service, and daily witness, we unite
+              faith and action in all we do.
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- LINKS -->
+        <div class="col-lg-2 col-md-6">
+
+          <h4 class="footer-heading">
+            Quick Links
+          </h4>
+
+          <ul class="footer-links">
+
+            <li><a href="#hero">Home</a></li>
+
+            <li><a href="#about">Who We Are</a></li>
+
+            <li><a href="#vocation">Vocation</a></li>
+
+            <li><a href="#welfare">Welfare Support</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+          </ul>
+
+        </div>
+
+        <!-- GALLERY -->
+        <div class="col-lg-3 col-md-6">
+
+          <h4 class="footer-heading">
+            Mission Gallery
+          </h4>
+
+          <div class="footer-gallery">
+
+            <img src="./assets/images/abt.bgr.png" onclick="openImage(this.src)" alt="Gallery">
+
+            <img src="./assets/images/welfare.help.png" onclick="openImage(this.src)" alt="Gallery">
+
+            <img src="./assets/images/welfare.education.png" onclick="openImage(this.src)" alt="Gallery">
+
+            <img src="./assets/images/header-bg.png" onclick="openImage(this.src)" alt="Gallery">
+
+          </div>
+
+        </div>
+
+        <!-- NEWSLETTER -->
+        <div class="col-lg-4 col-md-12">
+
+          <h4 class="footer-heading">
+            Subscribe to our Newsletter
+          </h4>
+
+          <p class="footer-news-text">
+            Receive updates on our mission,
+            formation, welfare projects,
+            and community activities.
+          </p>
+
+          <form class="footer-newsletter">
+
+            <input type="email" placeholder="Enter your email address">
+
+            <button type="submit">
+              Subscribe
             </button>
 
-            <img id="modalImage"
-                 class="img-fluid rounded"
-                 alt="Gallery Preview">
+          </form>
+
+          <div class="footer-social">
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-youtube"></i></a>
+
+            <a href="#"><i class="fab fa-twitter"></i></a>
+
+          </div>
 
         </div>
+
+      </div>
+
+      <hr class="footer-line">
+
+      <div class="footer-bottom">
+
+        <p>
+          © 2026 Servite Mission Sisters – African Region of the
+          Servite Secular Institute (Servants of Mary)
+        </p>
+
+      </div>
+
     </div>
-</div>
+
+  </footer>
 
 
-      <script>
+  <!-- IMAGE MODAL -->
+
+  <div class="modal fade" id="galleryModal" tabindex="-1">
+
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+
+      <div class="modal-content bg-transparent border-0">
+
+        <button type="button" class="btn-close btn-close-white ms-auto mb-3" data-bs-dismiss="modal">
+        </button>
+
+        <img id="modalImage" class="img-fluid rounded shadow">
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- SCRIPTS -->
+  <script src="./assets/js/jquery-3.6.0.min.js"></script>
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/plugin/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
+  <script src="./assets/plugin/aos/aos.js"></script>
+  <script src="./assets/js/main.js"></script>
+
+  <script>
     function openImage(src) {
-        document.getElementById("modalImage").src = src;
-        new bootstrap.Modal(document.getElementById("galleryModal")).show();
+      const modalImage = document.getElementById("modalImage");
+
+      if (modalImage) {
+        modalImage.src = src;
+      }
+
+      const galleryModal = document.getElementById("galleryModal");
+
+      if (galleryModal) {
+        new bootstrap.Modal(galleryModal).show();
+      }
     }
+
+    window.addEventListener("load", function () {
+      const loader = document.getElementById("page-loader");
+
+      if (loader) {
+        setTimeout(function () {
+          loader.classList.add("hide");
+        }, 800);
+      }
+    });
+  </script>
+
+  <script>
+    function openInfoModal(title, text) {
+      document.getElementById("infoModalTitle").innerText = title;
+      document.getElementById("infoModalText").innerText = text;
+      document.getElementById("infoModal").classList.add("show");
+    }
+
+    function closeInfoModal() {
+      document.getElementById("infoModal").classList.remove("show");
+    }
+
+    document.getElementById("infoModal").addEventListener("click", function (e) {
+      if (e.target === this) {
+        closeInfoModal();
+      }
+    });
+  </script>
+  <!-- Mission Modal -->
+  <script>
+
+    function openMissionModal() {
+
+      document.getElementById(
+        "missionModal"
+      ).classList.add("show");
+
+    }
+
+    function closeMissionModal() {
+
+      document.getElementById(
+        "missionModal"
+      ).classList.remove("show");
+
+    }
+
+    document.getElementById("missionModal")
+      .addEventListener("click", function (e) {
+
+        if (e.target === this) {
+
+          closeMissionModal();
+
+        }
+
+      });
+
+  </script>
+  <script>
+    const videoModal =
+      document.getElementById('videoModal');
+
+    videoModal.addEventListener(
+      'hidden.bs.modal',
+      function () {
+
+        const video =
+          document.getElementById('serviteVideo');
+
+        video.pause();
+        video.currentTime = 0;
+
+      });
+  </script>
+
+  <script>
+    const missionVideoModal = document.getElementById("missionVideoModal");
+    const missionVideo = document.getElementById("missionVideo");
+
+    missionVideoModal.addEventListener("hidden.bs.modal", function () {
+      missionVideo.pause();
+      missionVideo.currentTime = 0;
+    });
+  </script>
+
+  <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("vocationForm");
+  const status = document.getElementById("formStatus");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    status.innerHTML = "Sending your inquiry...";
+
+    const formData = new FormData(form);
+
+    fetch("https://script.google.com/macros/s/AKfycbydHSFPSJGOHoZVjOV6zA9ruJ1ilDlm6JFatEV63o4AOC9MuIuund5D5W-2g8Y2b7ZLQA/exec", {
+      method: "POST",
+      mode: "no-cors",
+      body: formData
+    });
+
+    status.innerHTML = "Thank you. Your inquiry has been submitted successfully.";
+    form.reset();
+  });
+});
+
 </script>
-      <script src="./assets/js/jquery-3.6.0.min.js"></script>
-      <script src="./assets/js/bootstrap.bundle.min.js"></script>
-      <script src="./assets/plugin/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
-      <script src="./assets/plugin/aos/aos.js"></script>
-      <script src="./assets/js/main.js"></script>
 
-      <script>
-        window.addEventListener("load", function () {
-          const loader = document.getElementById("page-loader");
-
-          setTimeout(function () {
-            loader.classList.add("hide");
-          }, 800);
-        });
-      </script>
 </body>
 
 </html>

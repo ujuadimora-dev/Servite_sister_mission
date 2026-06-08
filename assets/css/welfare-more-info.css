@@ -1,0 +1,372 @@
+/* =========================
+   GENERAL
+========================= */
+
+body{
+    margin:0;
+    background:#f8fbff;
+    color:#555;
+    font-family:Arial, sans-serif;
+}
+
+hr{
+    max-width:900px;
+    margin:60px auto;
+    opacity:.15;
+}
+
+
+/* =========================
+   BIG WELFARE BANNER
+========================= */
+
+.welfare-banner{
+    min-height:85vh;
+    background:
+        linear-gradient(rgba(0,45,114,.82), rgba(0,45,114,.82)),
+        url("../images/welfare.help.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+}
+
+.welfare-banner-content{
+    max-width:1100px;
+    margin:auto;
+}
+
+.banner-subtitle{
+    display:inline-block;
+    background:rgba(255,255,255,.15);
+    color:#fff;
+    padding:12px 28px;
+    border-radius:50px;
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:700;
+    margin-bottom:28px;
+}
+
+.banner-main-title{
+    font-size:86px !important;
+    font-weight:900 !important;
+    line-height:1.15;
+    margin-bottom:28px;
+    color:#ffffff !important;
+}
+
+.banner-bullet{
+    color:#ffffff !important;
+    margin:0 18px;
+    font-weight:400;
+}
+
+.banner-orange{
+    color:#ff8c00 !important;
+}
+
+.banner-text{
+    max-width:760px;
+    margin:auto;
+    font-size:21px;
+    line-height:1.9;
+    color:#f5f5f5;
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.welfare-info-section{
+    background:#f8fbff;
+}
+
+.info-column-block{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.section-heading{
+    color:#002d72;
+    font-size:44px;
+    font-weight:900;
+    margin-bottom:35px;
+}
+
+.text-columns{
+    column-count:3;
+    column-gap:45px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.text-columns p{
+    color:#555;
+    font-size:17px;
+    line-height:1.9;
+    text-align:left;
+    break-inside:avoid;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.button-area{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.site-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:220px;
+    height:55px;
+    background:#ff8c00;
+    color:#fff !important;
+    border-radius:50px;
+    text-decoration:none !important;
+    font-weight:700;
+    transition:.35s ease;
+}
+
+.site-btn:hover{
+    background:#002d72;
+    color:#fff !important;
+    transform:translateY(-3px);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.sms-footer{
+    width:100%;
+    background:#002d72;
+    color:#ffffff;
+    padding:90px 0 35px;
+    margin:0;
+}
+
+.sms-footer-inner{
+    width:100%;
+    padding-left:70px;
+    padding-right:70px;
+}
+
+.sms-footer-logo{
+    color:#ffffff;
+    font-size:38px;
+    font-weight:900;
+    margin-bottom:10px;
+}
+
+.sms-footer-tagline{
+    color:#ff8c00;
+    font-size:18px;
+    font-weight:700;
+    font-style:italic;
+    margin-bottom:25px;
+}
+
+.sms-footer-card{
+    background:rgba(255,255,255,.08);
+    padding:25px;
+    border-radius:20px;
+}
+
+.sms-footer-card h5{
+    color:#ffffff;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.sms-footer-card i{
+    color:#ff8c00;
+}
+
+.sms-footer-card p{
+    color:#e0e0e0;
+    line-height:1.8;
+    margin-bottom:0;
+}
+
+.sms-footer-heading{
+    color:#ffffff;
+    font-size:24px;
+    font-weight:800;
+    margin-bottom:25px;
+}
+
+.sms-footer-links{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.sms-footer-links li{
+    margin-bottom:14px;
+}
+
+.sms-footer-links a{
+    color:#e0e0e0;
+    text-decoration:none !important;
+    transition:.3s ease;
+}
+
+.sms-footer-links a:hover{
+    color:#ff8c00;
+    padding-left:6px;
+}
+
+.sms-footer-text{
+    color:#e0e0e0;
+    line-height:1.8;
+    margin-bottom:22px;
+    max-width:600px;
+}
+
+.sms-footer-newsletter{
+    display:flex;
+    gap:12px;
+    max-width:650px;
+}
+
+.sms-footer-newsletter input{
+    flex:1;
+    height:55px;
+    border:none;
+    outline:none;
+    border-radius:50px;
+    padding:0 20px;
+}
+
+.sms-footer-newsletter button{
+    width:170px;
+    height:55px;
+    border:none;
+    border-radius:50px;
+    background:#ff8c00;
+    color:#ffffff;
+    font-weight:800;
+    transition:.3s ease;
+}
+
+.sms-footer-newsletter button:hover{
+    background:#ffffff;
+    color:#002d72;
+}
+
+.sms-footer-social{
+    margin-top:25px;
+}
+
+.sms-footer-social a{
+    width:45px;
+    height:45px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.12);
+    color:#ffffff;
+    border-radius:50%;
+    margin-right:10px;
+    text-decoration:none !important;
+    transition:.3s ease;
+}
+
+.sms-footer-social a:hover{
+    background:#ff8c00;
+    color:#ffffff;
+    transform:translateY(-4px);
+}
+
+.sms-footer-bottom{
+    border-top:1px solid rgba(255,255,255,.18);
+    margin-top:60px;
+    padding-top:25px;
+    text-align:center;
+}
+
+.sms-footer-bottom p{
+    color:#d6d6d6;
+    margin:0;
+    font-size:14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:991px){
+
+    .text-columns{
+        column-count:2;
+    }
+
+    .banner-main-title{
+        font-size:58px !important;
+    }
+}
+
+@media(max-width:768px){
+
+    .welfare-banner{
+        min-height:70vh;
+    }
+
+    .banner-main-title{
+        font-size:38px !important;
+        line-height:1.4;
+    }
+
+    .banner-bullet{
+        margin:0 8px;
+    }
+
+    .banner-text{
+        font-size:17px;
+    }
+
+    .text-columns{
+        column-count:1;
+    }
+
+    .text-columns p{
+        text-align:center;
+    }
+
+    .sms-footer{
+        text-align:center;
+        padding:70px 0 30px;
+    }
+
+    .sms-footer-inner{
+        padding-left:25px;
+        padding-right:25px;
+    }
+
+    .sms-footer-logo{
+        font-size:30px;
+    }
+
+    .sms-footer-newsletter{
+        flex-direction:column;
+    }
+
+    .sms-footer-newsletter button{
+        width:100%;
+    }
+}
