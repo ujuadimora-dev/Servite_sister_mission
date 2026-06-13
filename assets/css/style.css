@@ -2602,6 +2602,144 @@ transition:.4s;
 transform:scale(1.05);
 
 }
+/* CONTACT COLUMN */
+
+.footer-contact p{
+    color:#d8d8d8;
+    margin-bottom:18px;
+    line-height:1.8;
+    font-size:15px;
+}
+
+.footer-contact i{
+    color:#ff8c00;
+    width:22px;
+    margin-right:8px;
+}
+
+.footer-contact a{
+    color:#d8d8d8;
+    text-decoration:none;
+}
+
+.footer-contact a:hover{
+    color:#ff8c00;
+}
+
+
+/* FOOTER LAYOUT IMPROVEMENT */
+/*   
+.footer-wrapper{
+    width:100%;
+    max-width:1400px;
+    margin:auto;
+    padding:0 40px;
+}
+*/
+.footer-wrapper{
+    width:100%;
+    max-width:1900px;
+    margin:0 auto;
+    padding:0 60px;
+}
+
+.footer-heading{
+    font-size:17px;
+    font-weight:700;
+    margin-bottom:25px;
+    color:#fff;
+}
+
+.footer-links{
+    list-style:none;
+    padding:0;
+}
+
+.footer-links li{
+    margin-bottom:12px;
+}
+
+.footer-links a{
+    color:#d8d8d8;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-links a:hover{
+    color:#ff8c00;
+    padding-left:5px;
+}
+
+.footer-news-text{
+    color:#d8d8d8;
+    line-height:1.8;
+}
+
+.footer-newsletter{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.footer-newsletter input{
+    height:55px;
+    border:none;
+    border-radius:50px;
+    padding:0 20px;
+}
+
+.footer-newsletter button{
+    height:55px;
+    border:none;
+    border-radius:50px;
+    background:#ff8c00;
+    color:#fff;
+    font-weight:700;
+    transition:.3s;
+}
+
+.footer-newsletter button:hover{
+    background:#fff;
+    color:#002d72;
+}
+
+.footer-social{
+    margin-top:25px;
+}
+
+.footer-social a{
+    width:45px;
+    height:45px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:rgba(255,255,255,.1);
+    color:#fff;
+    margin-right:10px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.footer-social a:hover{
+    background:#ff8c00;
+    transform:translateY(-4px);
+}
+
+.footer-line{
+    margin-top:50px;
+    border-color:rgba(255,255,255,.15);
+}
+
+.footer-bottom{
+    text-align:center;
+    padding-top:20px;
+}
+
+.footer-bottom p{
+    color:#cfcfcf;
+    margin:0;
+}
 
 
 /* Newsletter */
