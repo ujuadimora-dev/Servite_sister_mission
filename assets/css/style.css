@@ -2333,6 +2333,92 @@ padding:30px;
     padding: 35px 25px;
   }
 }
+
+/*enquiry page top.background*/
+
+.enquiry-hero-banner{
+    min-height:75vh;
+    background:
+        linear-gradient(rgba(0,45,114,.82), rgba(0,45,114,.82)),
+        url("../images/header-bg.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:#fff;
+}
+
+.enquiry-hero-content{
+    max-width:900px;
+    margin:auto;
+}
+
+.enquiry-hero-tag{
+    display:inline-block;
+    padding:11px 28px;
+    border-radius:50px;
+    background:rgba(255,255,255,.16);
+    color:#fff;
+    font-size:13px;
+    letter-spacing:2px;
+    font-weight:700;
+    margin-bottom:25px;
+}
+
+.enquiry-hero-content h1{
+    font-size:68px;
+    font-weight:900;
+    line-height:1.15;
+    margin-bottom:25px;
+}
+
+.enquiry-hero-content p{
+    max-width:760px;
+    margin:0 auto 35px;
+    font-size:19px;
+    line-height:1.9;
+    color:#f1f1f1;
+}
+
+.enquiry-hero-btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-width:230px;
+    height:58px;
+    background:#ff8c00;
+    color:#fff !important;
+    border-radius:50px;
+    text-decoration:none !important;
+    font-weight:700;
+    transition:.35s ease;
+    box-shadow:0 12px 30px rgba(255,140,0,.3);
+}
+
+.enquiry-hero-btn:hover{
+    background:#fff;
+    color:#002d72 !important;
+    transform:translateY(-3px);
+}
+
+#formStatus{
+    margin-top:18px;
+    color:#1f7a35;
+    font-weight:700;
+}
+
+@media(max-width:768px){
+    .enquiry-hero-content h1{
+        font-size:42px;
+    }
+
+    .enquiry-hero-content p{
+        font-size:16px;
+    }
+}
 /* Footer */
 
 .footer{
@@ -3348,6 +3434,49 @@ border-color:#ff8c00;
 .footer-line{
 border-color:rgba(255,255,255,.15);
 margin:50px 0 25px;
+}
+
+/* Make Read More popup scrollable */
+.info-modal,
+#infoModal{
+    overflow-y:auto;
+    padding:20px;
+}
+
+.info-modal-card,
+#infoModal .modal-content{
+    max-height:85vh;
+    overflow:hidden;
+}
+
+.info-modal-card p,
+#infoModalText,
+#modalText{
+    max-height:60vh;
+    overflow-y:auto;
+    display:block;
+    padding-right:12px;
+    white-space:pre-line;
+}
+
+/* Nice scrollbar */
+.info-modal-card p::-webkit-scrollbar,
+#infoModalText::-webkit-scrollbar,
+#modalText::-webkit-scrollbar{
+    width:8px;
+}
+
+.info-modal-card p::-webkit-scrollbar-thumb,
+#infoModalText::-webkit-scrollbar-thumb,
+#modalText::-webkit-scrollbar-thumb{
+    background:#ff8c00;
+    border-radius:10px;
+}
+
+.info-modal-card p::-webkit-scrollbar-track,
+#infoModalText::-webkit-scrollbar-track,
+#modalText::-webkit-scrollbar-track{
+    background:#f1f1f1;
 }
 
 
