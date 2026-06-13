@@ -21,7 +21,7 @@ hr{
 ========================= */
 
 .welfare-banner{
-    min-height:85vh;
+    min-height:50vh;
     background:
         linear-gradient(rgba(0,45,114,.82), rgba(0,45,114,.82)),
         url("../images/welfare.help.png");
