@@ -52,6 +52,7 @@
 }
 
 .hero-content p{
+    padding:12px 28px;
     font-size:20px;
     line-height:1.9;
     max-width:750px;
