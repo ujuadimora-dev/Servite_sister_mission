@@ -3339,17 +3339,17 @@ color:#fff;
 
 .discernment-circle{
     position:relative;
-    width:720px;
-    height:720px;
+    width:990px;
+    height:990px;
     margin:70px auto;
     border-radius:50%;
-    border:2px dashed rgba(255,140,0,.45);
+    border:4px dashed rgba(255,140,0,.45);
     animation:softRotate 30s linear infinite;
 }
 
 .discernment-step{
     position:absolute;
-    width:230px;
+    width:430px;
     background:#fff;
     padding:25px;
     border-radius:24px;
@@ -3386,10 +3386,10 @@ color:#fff;
 }
 
 .step-1{top:-35px; left:245px;}
-.step-2{top:120px; right:-80px;}
+.step-2{top:300px; right:-80px;}
 .step-3{bottom:20px; right:-30px;}
 .step-4{bottom:20px; left:-30px;}
-.step-5{top:150px; left:-80px;}
+.step-5{top:300px; left:-80px;}
 
 
 
