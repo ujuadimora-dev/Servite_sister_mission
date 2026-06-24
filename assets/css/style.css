@@ -17,6 +17,8 @@
   --font: Nunito Sans;
 }
 
+
+
   
 body {
     font-family: Poppins;
@@ -142,6 +144,49 @@ a {
     }
 }
 
+
+/** medal iamge css**/
+.discernment-process-section{
+    position:relative;
+    overflow:hidden;
+}
+
+.section-crucifix-watermark{
+    position:absolute;
+    right:-60px;
+    top:120px;
+    width:260px;
+    opacity:0.06;
+    z-index:0;
+    pointer-events:none;
+}
+
+.discernment-process-section > *:not(.section-crucifix-watermark){
+    position:relative;
+    z-index:2;
+}
+/** medial css.new *
+
+.test-crucifix-left,
+.test-crucifix-right{
+    position:fixed;
+    width:180px;
+    height:auto;
+    opacity:0.08;
+    z-index:1;
+    pointer-events:none;
+}
+
+/* Starts below Hero Section *
+.test-crucifix-left{
+    left:20px;
+    top:850px;      /* adjust to your hero height *
+}
+
+.test-crucifix-right{
+    right:20px;
+    top:850px;      /* adjust to your hero height */
+}
 .header .logo h1 {
   font-size: 30px;
   margin: 0;
@@ -4493,4 +4538,44 @@ body{
 
     }
 
+}
+
+/** medal image**
+.side-crucifix{
+    position:absolute;
+    z-index:1;
+    pointer-events:none;
+}
+
+.side-crucifix img{
+    width:90px;
+    height:auto;
+    opacity:0.18;
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,.15));
+    animation:floatCrucifix 6s ease-in-out infinite;
+}
+
+.left-crucifix{
+    left:30px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.right-crucifix{
+    right:30px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.right-crucifix img{
+    animation-delay:3s;
+}
+
+@keyframes floatCrucifix{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
 }
