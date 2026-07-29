@@ -3,149 +3,98 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Support the mission of the Servite Mission Sisters through a secure online donation. Your gift supports education, healthcare, spiritual formation and community outreach.">
+
     <title>Donate | Servite Mission Sisters</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/logo.servsister.png">
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="./assets/icons/fontawesome/css/fontawesome.min.css">
     <link rel="stylesheet" href="./assets/icons/fontawesome/css/solid.min.css">
     <link rel="stylesheet" href="./assets/icons/fontawesome/css/brands.min.css">
-    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Donation Page CSS -->
     <link rel="stylesheet" href="./assets/css/donate.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
 
 <body>
 
-    <section class="donation-page">
+    <!-- Header Start -->
+    <header class="donation-header">
 
         <div class="container">
 
-            <div class="donation-wrapper">
+            <div class="header-content">
 
-                <!-- LEFT SIDE -->
-                <div class="donation-left">
+                <a href="index.html" class="donation-brand">
 
-                    <div class="donation-logo">
-                        <img src="./assets/images/logo.servsister.png" alt="Servite Mission Sisters">
+                    <img src="./assets/images/logo.servsister.png"
+                        alt="Servite Mission Sisters Logo">
+
+                    <div class="brand-text">
+                        <span>Servite Mission Sisters</span>
+                        <small>Serving with Faith, Compassion and Love</small>
                     </div>
+
+                </a>
+
+                <a href="index.html" class="header-home-link">
+
+                    <i class="fas fa-home"></i>
+
+                    <span>Back to Home</span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+    <!-- Header End -->
+
+
+    <main>
+
+        <!-- Hero Section Start -->
+        <section class="donation-hero">
+
+            <div class="donation-hero-overlay"></div>
+
+            <div class="container">
+
+                <div class="donation-hero-content">
+
+                    <span class="hero-label">
+                        Support Our Mission
+                    </span>
 
                     <h1>
-                        Create Hope Through Giving
+                        Your Generosity Can Bring Hope and Transform Lives
                     </h1>
 
-                    <div class="donation-image-box">
-                        <img src="./assets/images/welfare.help.png" class="main-img" alt="Donation">
-
-                        <img src="./assets/images/welfare.education.png" class="circle-img circle-one" alt="Education">
-
-                        <img src="./assets/images/welfare_helth.png" class="circle-img circle-two" alt="Health">
-
-                        <img src="./assets/images/welfare.communty.png" class="circle-img circle-three" alt="Community">
-                    </div>
-
                     <p>
-                        When you donate to Servite Mission Sisters, you help provide healthcare,
-                        education, community outreach, humanitarian care, and spiritual support
-                        to individuals and families in need.
+                        Every gift helps the Servite Mission Sisters continue their
+                        mission of compassion, education, healthcare, spiritual
+                        formation and service to vulnerable communities.
                     </p>
 
-                </div>
+                    <a href="#secure-donation" class="hero-donate-btn">
 
+                        <i class="fas fa-heart"></i>
 
-                <!-- RIGHT SIDE -->
-                <div class="donation-right">
-
-                    <h3>
-                        Secure Donation
-                    </h3>
-
-                    <div class="donation-tabs">
-                        <button class="tab-btn">Give Once</button>
-                        <button class="tab-btn active">
-                            <i class="fas fa-heart"></i>
-                            Monthly
-                        </button>
-                    </div>
-
-                    <div class="amount-grid">
-                        <button>$250</button>
-                        <button>$130</button>
-                        <button>$55</button>
-                        <button>$35</button>
-                        <button>$10</button>
-                        <button>$5</button>
-                    </div>
-
-                    <div class="custom-amount">
-                        <span>$</span>
-                        <input type="number" placeholder="51">
-                        <small>USD</small>
-                    </div>
-
-                    <label class="dedicate-box">
-                        <input type="checkbox">
-                        Donate Now
-                    </label>
-
-                    <a href="https://revolut.me/nnekad" target="_blank" class="donate-btn-link">
-
-                        Support our Mission
-
-                    </a>
-
-                    <div class="donation-links mt-4">
-
-                        <!-- Question 1 -->
-
-                        <a class="faq-link" data-bs-toggle="collapse" href="#secureDonation">
-
-                            Is this donation secure?
-
-                        </a>
-
-                        <div class="collapse mt-2" id="secureDonation">
-
-                            <div class="faq-answer">
-
-                                Yes. Donations are processed through our secure payment partner,
-                                Revolut. Your payment information is protected and encrypted
-                                during the transaction process.
-
-                            </div>
-
-                        </div>
-
-
-                        <!-- Question 2 -->
-
-                        <a class="faq-link" data-bs-toggle="collapse" href="#cancelDonation">
-
-                            Can I cancel my recurring donation?
-
-                        </a>
-
-                        <div class="collapse mt-2" id="cancelDonation">
-
-                            <div class="faq-answer">
-
-                                Yes. If you have set up a recurring donation, you may cancel it
-                                at any time through your payment provider or by contacting us
-                                for assistance.
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="home-btn-wrapper">
-
-                    <a href="index.html" class="home-btn">
-
-                        <i class="fas fa-home me-2"></i>
-
-                        Back to Home
+                        Make a Donation
 
                     </a>
 
@@ -153,10 +102,872 @@
 
             </div>
 
+        </section>
+        <!-- Hero Section End -->
+
+
+        <!-- Main Donation Section Start -->
+        <section class="donation-main-section" id="secure-donation">
+
+            <div class="container">
+
+                <div class="row g-5 align-items-center">
+
+                    <!-- Left Content Start -->
+                    <div class="col-lg-7">
+
+                        <div class="donation-story">
+
+                            <div class="section-heading">
+
+                                <span class="section-subtitle">
+                                    Together, We Can Make a Difference
+                                </span>
+
+                                <h2>
+                                    Help Us Continue Christ’s Mission of Love and Service
+                                </h2>
+
+                            </div>
+
+                            <p class="story-introduction">
+                                Through your generosity, the Servite Mission Sisters are
+                                able to reach children, families, women and vulnerable
+                                communities with practical assistance, dignity, hope and
+                                spiritual care.
+                            </p>
+
+
+                            <!-- Image Composition Start -->
+                            <div class="donation-image-composition">
+
+                                <div class="main-donation-image">
+
+                                    <img src="./assets/images/welfare.help.png"
+                                        alt="Servite Mission Sisters helping people in the community">
+
+                                </div>
+
+                                <div class="support-image support-image-one">
+
+                                    <img src="./assets/images/welfare.education.png"
+                                        alt="Education support">
+
+                                </div>
+
+                                <div class="support-image support-image-two">
+
+                                    <img src="./assets/images/welfare_helth.png"
+                                        alt="Healthcare support">
+
+                                </div>
+
+                                <div class="support-image support-image-three">
+
+                                    <img src="./assets/images/welfare.communty.png"
+                                        alt="Community outreach">
+
+                                </div>
+
+                            </div>
+                            <!-- Image Composition End -->
+
+
+                            <!-- Mission Areas Start -->
+                            <div class="mission-support-grid">
+
+                                <div class="mission-support-card">
+
+                                    <div class="mission-support-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+
+                                    <div>
+                                        <h3>Education</h3>
+
+                                        <p>
+                                            Supporting children and young people with access
+                                            to learning and development opportunities.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mission-support-card">
+
+                                    <div class="mission-support-icon">
+                                        <i class="fas fa-hand-holding-medical"></i>
+                                    </div>
+
+                                    <div>
+                                        <h3>Healthcare</h3>
+
+                                        <p>
+                                            Providing health support, care and assistance to
+                                            individuals and families in need.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mission-support-card">
+
+                                    <div class="mission-support-icon">
+                                        <i class="fas fa-hands-praying"></i>
+                                    </div>
+
+                                    <div>
+                                        <h3>Spiritual Formation</h3>
+
+                                        <p>
+                                            Helping people grow in faith through prayer,
+                                            accompaniment and spiritual guidance.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mission-support-card">
+
+                                    <div class="mission-support-icon">
+                                        <i class="fas fa-people-group"></i>
+                                    </div>
+
+                                    <div>
+                                        <h3>Community Outreach</h3>
+
+                                        <p>
+                                            Promoting dignity, compassion and sustainable
+                                            support within local communities.
+                                        </p>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- Mission Areas End -->
+
+                        </div>
+
+                    </div>
+                    <!-- Left Content End -->
+
+
+                    <!-- Right Donation Card Start -->
+                    <div class="col-lg-5">
+
+                        <div class="secure-donation-card">
+
+                            <div class="secure-icon">
+
+                                <i class="fas fa-shield-heart"></i>
+
+                            </div>
+
+                            <span class="secure-label">
+                                Secure Online Donation
+                            </span>
+
+                            <h2>
+                                Support Our Mission
+                            </h2>
+
+                            <p class="donation-card-introduction">
+                                Your contribution, regardless of its size, enables us to
+                                continue serving those who need compassion, care and hope.
+                            </p>
+
+
+                            <div class="scripture-box">
+
+                                <i class="fas fa-quote-left"></i>
+
+                                <blockquote>
+                                    God loves a cheerful giver.
+                                </blockquote>
+
+                                <span>
+                                    2 Corinthians 9:7
+                                </span>
+
+                            </div>
+
+
+                            <div class="donation-benefits">
+
+                                <div class="donation-benefit">
+
+                                    <i class="fas fa-circle-check"></i>
+
+                                    <span>Safe and encrypted transaction</span>
+
+                                </div>
+
+                                <div class="donation-benefit">
+
+                                    <i class="fas fa-circle-check"></i>
+
+                                    <span>Securely processed through Stripe</span>
+
+                                </div>
+
+                                <div class="donation-benefit">
+
+                                    <i class="fas fa-circle-check"></i>
+
+                                    <span>Simple and confidential payment process</span>
+
+                                </div>
+
+                                <div class="donation-benefit">
+
+                                    <i class="fas fa-circle-check"></i>
+
+                                    <span>Donation receipt provided by Stripe</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <a href="https://donate.stripe.com/6oU28rfLg4WHcLE6FraIM00"
+                                class="stripe-donation-btn"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <i class="fas fa-lock"></i>
+
+                                Donate Securely
+
+                            </a>
+
+
+                            <div class="stripe-information">
+
+                                <div class="stripe-brand">
+
+                                    <i class="fab fa-stripe"></i>
+
+                                    <span>Powered by Stripe</span>
+
+                                </div>
+
+                                <p>
+                                    You will be securely redirected to Stripe to complete
+                                    your donation.
+                                </p>
+
+                            </div>
+
+
+                            <div class="donation-thank-you">
+
+                                <i class="fas fa-heart"></i>
+
+                                <p>
+                                    Thank you for helping us share Christ’s compassion,
+                                    mercy and hope with others.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!-- Right Donation Card End -->
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Main Donation Section End -->
+
+
+        <!-- Impact Section Start -->
+        <section class="donation-impact-section">
+
+            <div class="container">
+
+                <div class="section-heading text-center">
+
+                    <span class="section-subtitle">
+                        The Impact of Your Gift
+                    </span>
+
+                    <h2>
+                        Every Donation Becomes an Act of Love
+                    </h2>
+
+                    <p>
+                        Your support allows us to respond to real needs while respecting
+                        the dignity of every person we serve.
+                    </p>
+
+                </div>
+
+
+                <div class="row g-4 mt-3">
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="impact-card">
+
+                            <div class="impact-number">
+                                01
+                            </div>
+
+                            <i class="fas fa-book-open"></i>
+
+                            <h3>Learning Support</h3>
+
+                            <p>
+                                Helping children and young people receive educational
+                                opportunities.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="impact-card">
+
+                            <div class="impact-number">
+                                02
+                            </div>
+
+                            <i class="fas fa-notes-medical"></i>
+
+                            <h3>Health and Welfare</h3>
+
+                            <p>
+                                Supporting basic healthcare, wellbeing and humanitarian
+                                assistance.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="impact-card">
+
+                            <div class="impact-number">
+                                03
+                            </div>
+
+                            <i class="fas fa-bowl-food"></i>
+
+                            <h3>Practical Assistance</h3>
+
+                            <p>
+                                Providing essential help to families and vulnerable
+                                individuals.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-3">
+
+                        <div class="impact-card">
+
+                            <div class="impact-number">
+                                04
+                            </div>
+
+                            <i class="fas fa-church"></i>
+
+                            <h3>Faith and Mission</h3>
+
+                            <p>
+                                Supporting evangelization, spiritual formation and
+                                missionary service.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Impact Section End -->
+
+
+        <!-- FAQ Section Start -->
+        <section class="donation-faq-section">
+
+            <div class="container">
+
+                <div class="row g-5">
+
+                    <div class="col-lg-5">
+
+                        <div class="faq-introduction">
+
+                            <span class="section-subtitle">
+                                Donation Information
+                            </span>
+
+                            <h2>
+                                Frequently Asked Questions
+                            </h2>
+
+                            <p>
+                                Here are answers to some common questions about making
+                                an online donation.
+                            </p>
+
+                            <div class="faq-help-box">
+
+                                <div class="faq-help-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+
+                                <div>
+                                    <span>Need assistance?</span>
+
+                                    <a href="contact.html">
+                                        Contact the Servite Mission Sisters
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-lg-7">
+
+                        <div class="accordion donation-accordion"
+                            id="donationAccordion">
+
+
+                            <!-- FAQ 1 -->
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header"
+                                    id="headingOne">
+
+                                    <button class="accordion-button"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne"
+                                        aria-expanded="true"
+                                        aria-controls="collapseOne">
+
+                                        Is my donation secure?
+
+                                    </button>
+
+                                </h3>
+
+                                <div id="collapseOne"
+                                    class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne"
+                                    data-bs-parent="#donationAccordion">
+
+                                    <div class="accordion-body">
+
+                                        Yes. Your donation is securely processed by
+                                        Stripe. Stripe uses encryption and recognised
+                                        security standards to protect payment information
+                                        during every transaction.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- FAQ 2 -->
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header"
+                                    id="headingTwo">
+
+                                    <button class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo"
+                                        aria-expanded="false"
+                                        aria-controls="collapseTwo">
+
+                                        Will I receive confirmation of my donation?
+
+                                    </button>
+
+                                </h3>
+
+                                <div id="collapseTwo"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="headingTwo"
+                                    data-bs-parent="#donationAccordion">
+
+                                    <div class="accordion-body">
+
+                                        Stripe can send a payment confirmation or receipt
+                                        to the email address provided during the donation
+                                        process.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- FAQ 3 -->
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header"
+                                    id="headingThree">
+
+                                    <button class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree"
+                                        aria-expanded="false"
+                                        aria-controls="collapseThree">
+
+                                        Can I make a recurring donation?
+
+                                    </button>
+
+                                </h3>
+
+                                <div id="collapseThree"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree"
+                                    data-bs-parent="#donationAccordion">
+
+                                    <div class="accordion-body">
+
+                                        Recurring donation options will be displayed on
+                                        the Stripe payment page when they have been enabled
+                                        by the Servite Mission Sisters.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- FAQ 4 -->
+                            <div class="accordion-item">
+
+                                <h3 class="accordion-header"
+                                    id="headingFour">
+
+                                    <button class="accordion-button collapsed"
+                                        type="button"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour"
+                                        aria-expanded="false"
+                                        aria-controls="collapseFour">
+
+                                        How will my donation be used?
+
+                                    </button>
+
+                                </h3>
+
+                                <div id="collapseFour"
+                                    class="accordion-collapse collapse"
+                                    aria-labelledby="headingFour"
+                                    data-bs-parent="#donationAccordion">
+
+                                    <div class="accordion-body">
+
+                                        Donations support the mission and charitable work
+                                        of the Servite Mission Sisters, including
+                                        education, healthcare, spiritual formation,
+                                        community outreach and humanitarian assistance.
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- FAQ Section End -->
+
+
+        <!-- Final Call to Action Start -->
+        <section class="donation-final-cta">
+
+            <div class="container">
+
+                <div class="final-cta-content">
+
+                    <div>
+
+                        <span>Be Part of Our Mission</span>
+
+                        <h2>
+                            Together, We Can Bring Hope to Those in Need
+                        </h2>
+
+                        <p>
+                            Your support strengthens our mission and helps us continue
+                            serving with faith, compassion and love.
+                        </p>
+
+                    </div>
+
+                    <a href="https://donate.stripe.com/6oU28rfLg4WHcLE6FraIM00"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="final-cta-btn">
+
+                        <i class="fas fa-heart"></i>
+
+                        Donate Now
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- Final Call to Action End -->
+
+    </main>
+
+
+    <!-- Footer Start -->
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+  <footer class="footer" id="contact">
+
+    ```
+    <div class="footer-wrapper">
+
+      <div class="row g-5 align-items-start">
+
+        <!-- ABOUT -->
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="footer-heading">
+            Servite Mission Sisters
+          </h4>
+
+
+
+          <p class="footer-tagline">
+            Simplicity and Sacrifice
+          </p>
+
+          <div class="footer-prayer-card">
+
+            <h5>
+              <i class="fas fa-praying-hands me-2"></i>
+              Prayer in Action
+            </h5>
+
+            <p>
+              We are not set apart from the world, but sent into it.
+              Through prayer, service, and daily witness, we unite
+              faith and action in all we do.
+            </p>
+
+          </div>
+
         </div>
 
-    </section>
+
+        <!-- QUICK LINKS -->
+
+        <div class="col-lg-2 col-md-6">
+
+          <h4 class="footer-heading">
+            Quick Links
+          </h4>
+
+          <ul class="footer-links">
+
+            <li><a href="index.html#hero">Home</a></li>
+
+            <li><a href="index.html#about">Who We Are</a></li>
+
+            <li><a href="index.html#vocation">Vocation</a></li>
+
+            <li><a href="index.html#welfare">Welfare Support</a></li>
+
+            <li><a href="index.html#contact">Contact</a></li>
+
+          </ul>
+
+        </div>
+
+
+        <!-- CONTACT INFORMATION -->
+
+        <div class="col-lg-3 col-md-6">
+
+          <h4 class="footer-heading">
+            Contact US
+          </h4>
+
+          <div class="footer-contact">
+
+            <p>
+              <i class="fas fa-map-marker-alt"></i>
+              <strong>Address</strong><br>
+              Servite Mission Sisters<br>
+              African Region<br>
+
+
+            </p>
+            <!---
+                
+
+                <p>
+                    <i class="fas fa-phone-alt"></i>
+                    <strong>Nigeria:</strong><br>
+                    +234 XXX XXX XXXX
+                </p>
+
+                <p>
+                    <i class="fas fa-phone-alt"></i>
+                    <strong>London</strong><br>
+                    + XXX XXX XXXX
+                </p>
+            -->
+
+            <p>
+              <i class="fas fa-envelope"></i>
+              <strong>Vocations:</strong><br>
+              vocations@servitemissionsisters.org
+            </p>
+
+            <p>
+              <i class="fas fa-envelope"></i>
+              <strong>General Enquiries:</strong><br>
+              info@servitemissionsisters.org
+            </p>
+            <p>
+              <i class="fas fa-globe"></i>
+              <strong>Website:</strong><br>
+              <a href="https://www.servitemissionsisters.org" target="_blank">
+                www.servitemissionsisters.org
+              </a>
+
+          </div>
+
+        </div>
+
+
+        <!-- NEWSLETTER -->
+
+        <div class="col-lg-4 col-md-12">
+
+          <h4 class="footer-heading">
+            Subscribe to Our Newsletter
+          </h4>
+
+          <p class="footer-news-text">
+            Receive updates on our mission, formation,
+            welfare projects, community outreach,
+            and upcoming events.
+          </p>
+
+          <form class="footer-newsletter">
+
+            <input type="email" placeholder="Enter your email address">
+
+            <button type="submit">
+              Subscribe
+            </button>
+
+          </form>
+
+          <div class="footer-social">
+
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="#"><i class="fab fa-instagram"></i></a>
+
+            <a href="#"><i class="fab fa-youtube"></i></a>
+
+            <a href="#"><i class="fab fa-twitter"></i></a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <hr class="footer-line">
+
+      <div class="footer-bottom">
+
+        <p>
+          © 2026 Servite Mission Sisters – African Region of the
+          Servite Secular Institute (Servants of Mary).
+          All Rights Reserved.
+        </p>
+
+      </div>
+
+    </div>
+    ```
+
+  </footer>
+
+    <!-- Footer End -->
+
+
+    <!-- Back to Home Floating Button -->
+    <a href="index.html"
+        class="floating-home-btn"
+        aria-label="Back to Home">
+
+        <i class="fas fa-home"></i>
+
+    </a>
+
+
+    <!-- Bootstrap JavaScript -->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Current Year -->
+    <script>
+        const currentYear = document.getElementById("currentYear");
+
+        if (currentYear) {
+            currentYear.textContent = new Date().getFullYear();
+        }
+    </script>
 
 </body>
 
