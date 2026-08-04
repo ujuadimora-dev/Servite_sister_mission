@@ -1,0 +1,851 @@
+/* =========================================================
+   SERVITE MISSION SISTERS
+   SHARED POLICY PAGES
+========================================================= */
+
+:root {
+    --primary: #062b6f;
+    --primary-dark: #041e4f;
+    --primary-light: #154b9c;
+
+    --accent: #ff8a00;
+    --accent-dark: #df7600;
+    --accent-soft: #fff4e5;
+
+    --white: #ffffff;
+    --background: #f6f8fc;
+    --background-soft: #eef3fa;
+
+    --heading: #062b6f;
+    --text: #4f5d70;
+    --text-light: #6d7888;
+
+    --border: #dce5f0;
+
+    --shadow-small: 0 10px 30px rgba(6, 43, 111, 0.08);
+    --shadow-medium: 0 18px 45px rgba(6, 43, 111, 0.13);
+
+    --transition: all 0.3s ease;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--heading);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.policy-header {
+    position: relative;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 5px 18px rgba(6, 43, 111, 0.05);
+}
+
+.policy-header-wrapper {
+    min-height: 92px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.policy-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.policy-brand img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.policy-brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.policy-brand-text strong {
+    color: var(--primary);
+    font-size: 1.25rem;
+}
+
+.policy-brand-text span {
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.policy-home-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: var(--primary);
+    background: transparent;
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    padding: 10px 21px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.policy-home-link:hover {
+    color: var(--white);
+    background: var(--primary);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.policy-hero {
+    position: relative;
+    overflow: hidden;
+    color: var(--white);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(4, 30, 79, 0.98),
+            rgba(6, 43, 111, 0.93)
+        );
+    padding: 105px 0 95px;
+}
+
+.policy-hero::before {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    top: -190px;
+    right: -100px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+}
+
+.policy-hero::after {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    right: 17%;
+    bottom: -170px;
+    background: rgba(255, 138, 0, 0.14);
+    border-radius: 50%;
+}
+
+.policy-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.policy-hero-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.policy-label {
+    display: inline-block;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50px;
+    padding: 9px 20px;
+    margin-bottom: 20px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.policy-hero h1 {
+    color: var(--white);
+    font-size: clamp(2.6rem, 5vw, 4.6rem);
+    margin-bottom: 20px;
+}
+
+.policy-hero h1 span {
+    color: var(--accent);
+}
+
+.policy-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.04rem;
+}
+
+.policy-updated {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.82);
+    margin-top: 25px;
+    font-size: 0.86rem;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+========================================================= */
+
+.policy-breadcrumb {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+}
+
+.policy-breadcrumb-wrapper {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--text-light);
+    font-size: 0.88rem;
+}
+
+.policy-breadcrumb a {
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.policy-breadcrumb a:hover {
+    color: var(--accent);
+}
+
+.policy-breadcrumb i {
+    font-size: 0.7rem;
+}
+
+
+/* =========================================================
+   MAIN POLICY LAYOUT
+========================================================= */
+
+.policy-main {
+    padding: 90px 0;
+}
+
+.policy-layout {
+    display: grid;
+    grid-template-columns: 290px minmax(0, 1fr);
+    gap: 45px;
+    align-items: start;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.policy-sidebar {
+    position: sticky;
+    top: 25px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 22px;
+    padding: 25px;
+    box-shadow: var(--shadow-small);
+}
+
+.policy-sidebar h2 {
+    color: var(--primary);
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+}
+
+.policy-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.policy-navigation a {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    color: var(--text);
+    border-radius: 12px;
+    padding: 11px 13px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.policy-navigation a i {
+    width: 18px;
+    color: var(--accent);
+    text-align: center;
+}
+
+.policy-navigation a:hover,
+.policy-navigation a.active {
+    color: var(--white);
+    background: var(--primary);
+}
+
+.policy-navigation a:hover i,
+.policy-navigation a.active i {
+    color: var(--white);
+}
+
+.policy-help-box {
+    background: var(--accent-soft);
+    border-left: 4px solid var(--accent);
+    border-radius: 0 14px 14px 0;
+    padding: 18px;
+    margin-top: 25px;
+}
+
+.policy-help-box h3 {
+    color: var(--primary);
+    font-size: 0.96rem;
+    margin-bottom: 8px;
+}
+
+.policy-help-box p {
+    color: var(--text-light);
+    font-size: 0.8rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.policy-help-box a {
+    color: var(--primary);
+    font-size: 0.82rem;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+.policy-help-box a:hover {
+    color: var(--accent-dark);
+}
+
+
+/* =========================================================
+   POLICY CONTENT
+========================================================= */
+
+.policy-content {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 55px;
+    box-shadow: var(--shadow-small);
+}
+
+.policy-introduction {
+    color: var(--text);
+    background: var(--background-soft);
+    border-left: 5px solid var(--accent);
+    border-radius: 0 18px 18px 0;
+    padding: 25px;
+    margin-bottom: 40px;
+}
+
+.policy-section {
+    scroll-margin-top: 30px;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid var(--border);
+}
+
+.policy-section:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.policy-section h2 {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    color: var(--primary);
+    font-size: 1.55rem;
+    margin-bottom: 18px;
+}
+
+.policy-section h2 span {
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background: var(--primary);
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+.policy-section h3 {
+    color: var(--primary);
+    font-size: 1.08rem;
+    margin: 25px 0 10px;
+}
+
+.policy-section p {
+    color: var(--text);
+    margin-bottom: 15px;
+}
+
+.policy-section ul,
+.policy-section ol {
+    padding-left: 22px;
+    margin: 15px 0 20px;
+}
+
+.policy-section li {
+    color: var(--text);
+    margin-bottom: 9px;
+    padding-left: 5px;
+}
+
+.policy-section li::marker {
+    color: var(--accent);
+}
+
+.policy-highlight {
+    display: flex;
+    gap: 15px;
+    color: var(--text);
+    background: var(--accent-soft);
+    border: 1px solid #f7d7a8;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.policy-highlight i {
+    color: var(--accent);
+    font-size: 1.3rem;
+    margin-top: 4px;
+}
+
+.policy-contact-card {
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary-dark),
+            var(--primary)
+        );
+    color: var(--white);
+    border-radius: 20px;
+    padding: 28px;
+    margin-top: 25px;
+}
+
+.policy-contact-card h3 {
+    color: var(--white);
+    margin: 0 0 15px;
+}
+
+.policy-contact-card p,
+.policy-contact-card a {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.policy-contact-card a:hover {
+    color: var(--accent);
+}
+
+.policy-contact-item {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.policy-contact-item i {
+    color: var(--accent);
+    margin-top: 6px;
+}
+
+
+/* =========================================================
+   PAGE ACTIONS
+========================================================= */
+
+.policy-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 35px;
+}
+
+.policy-action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    color: var(--white);
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    padding: 12px 23px;
+    font-weight: 700;
+    transition: var(--transition);
+}
+
+.policy-action-button:hover {
+    color: var(--primary);
+    background: transparent;
+}
+
+.policy-action-button.secondary {
+    color: var(--primary);
+    background: transparent;
+}
+
+.policy-action-button.secondary:hover {
+    color: var(--white);
+    background: var(--primary);
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.policy-footer {
+    color: var(--white);
+    background: #07377f;
+    padding: 70px 0 25px;
+}
+
+.policy-footer-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr 1fr;
+    gap: 50px;
+    padding-bottom: 45px;
+}
+
+.policy-footer h3,
+.policy-footer h4 {
+    color: var(--white);
+    margin-bottom: 18px;
+}
+
+.policy-footer-brand {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+}
+
+.policy-footer-brand img {
+    width: 78px;
+    height: 78px;
+    object-fit: contain;
+    background: var(--white);
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.policy-footer-brand p,
+.policy-footer-contact p {
+    color: rgba(255, 255, 255, 0.82);
+    margin: 0;
+}
+
+.policy-footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.policy-footer-links a,
+.policy-footer-contact a {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.policy-footer-links a:hover,
+.policy-footer-contact a:hover {
+    color: var(--accent);
+}
+
+.policy-footer-contact p {
+    margin-bottom: 10px;
+}
+
+.policy-footer-contact i {
+    color: var(--accent);
+    width: 22px;
+}
+
+.policy-footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 25px;
+    text-align: center;
+}
+
+.policy-footer-bottom p {
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.policy-back-top {
+    position: fixed;
+    z-index: 90;
+    right: 22px;
+    bottom: 22px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    background: var(--accent);
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition);
+}
+
+.policy-back-top:hover {
+    color: var(--white);
+    background: var(--primary);
+    transform: translateY(-4px);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+    .policy-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .policy-sidebar {
+        position: relative;
+        top: auto;
+    }
+
+    .policy-navigation {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .policy-footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+    .policy-header-wrapper {
+        min-height: 82px;
+    }
+
+    .policy-brand img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .policy-brand-text strong {
+        font-size: 1.03rem;
+    }
+
+    .policy-brand-text span {
+        display: none;
+    }
+
+    .policy-home-link span {
+        display: none;
+    }
+
+    .policy-home-link {
+        width: 45px;
+        height: 45px;
+        padding: 0;
+    }
+
+    .policy-hero {
+        padding: 80px 0 75px;
+    }
+
+    .policy-main {
+        padding: 65px 0;
+    }
+
+    .policy-content {
+        padding: 35px 26px;
+        border-radius: 22px;
+    }
+
+    .policy-navigation {
+        grid-template-columns: 1fr;
+    }
+
+    .policy-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 575.98px) {
+    .policy-header .container,
+    .policy-hero .container,
+    .policy-breadcrumb .container,
+    .policy-main .container,
+    .policy-footer .container {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .policy-content {
+        padding: 30px 20px;
+    }
+
+    .policy-section h2 {
+        align-items: flex-start;
+        font-size: 1.3rem;
+    }
+
+    .policy-section h2 span {
+        flex-basis: 36px;
+        width: 36px;
+        height: 36px;
+    }
+
+    .policy-actions {
+        flex-direction: column;
+    }
+
+    .policy-action-button {
+        width: 100%;
+    }
+
+    .policy-footer-brand {
+        flex-direction: column;
+    }
+}
+
+
+/* =========================================================
+   PRINT
+========================================================= */
+
+@media print {
+    .policy-header,
+    .policy-hero,
+    .policy-breadcrumb,
+    .policy-sidebar,
+    .policy-footer,
+    .policy-actions,
+    .policy-back-top {
+        display: none !important;
+    }
+
+    body {
+        background: var(--white);
+    }
+
+    .policy-main {
+        padding: 0;
+    }
+
+    .policy-layout {
+        display: block;
+    }
+
+    .policy-content {
+        border: none;
+        box-shadow: none;
+        padding: 0;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
