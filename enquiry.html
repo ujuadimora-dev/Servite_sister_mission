@@ -67,10 +67,13 @@
 
                 <div class="vocation-contact-form">
 
-                    <span class="small-text">JOIN US</span>
+                    <span class="small-text">
+                        JOIN US
+                    </span>
 
                     <h3 class="form-heading">
-                        Get in <span style="color:#ff8c00;">Touch</span>
+                        Vocation
+                        <span style="color:#ff8c00;">Inquiry</span>
                     </h3>
 
                     <p class="form-intro">
@@ -81,17 +84,29 @@
 
                     <form id="vocationForm">
 
-                        <input type="text" name="fullname" placeholder="Full Name" required>
+                        <!-- Full Name -->
+                        <input type="text" name="fullname" placeholder="Full Name" autocomplete="name" required>
 
-                        <input type="email" name="email" placeholder="Email Address" required>
 
-                        <input type="tel" name="phone" placeholder="Phone Number (Optional)">
+                        <!-- Email -->
+                        <input type="email" name="email" placeholder="Email Address" autocomplete="email" required>
+
+
+                        <!-- Phone -->
+                        <input type="tel" name="phone" placeholder="Phone Number (Optional)" autocomplete="tel">
+
 
                         <div class="row">
 
+                            <!-- Age -->
                             <div class="col-md-6 mb-3">
+
                                 <select name="age" class="form-select-field" required>
-                                    <option value="">Select Age Range</option>
+
+                                    <option value="">
+                                        Select Age Range
+                                    </option>
+
                                     <option value="10-15">10 - 15</option>
                                     <option value="16-20">16 - 20</option>
                                     <option value="21-25">21 - 25</option>
@@ -102,23 +117,63 @@
                                     <option value="46-50">46 - 50</option>
                                     <option value="51-55">51 - 55</option>
                                     <option value="Others">Others</option>
+
                                 </select>
+
                             </div>
 
+
+                            <!-- Country -->
                             <div class="col-md-6 mb-3">
-                                <input type="text" name="country" placeholder="Country of Residence">
+
+                                <input type="text" name="country" placeholder="Country of Residence"
+                                    autocomplete="country-name" required>
+
                             </div>
 
                         </div>
 
+
+                        <!-- Message -->
                         <textarea name="message" rows="5"
                             placeholder="Tell us about yourself and why you feel called..." required></textarea>
 
-                        <button type="submit" class="vocation-submit-btn">
-                            Send Inquiry
+
+                        <!-- Privacy Consent -->
+                        <label class="vocation-consent">
+
+                            <input type="checkbox" name="privacyConsent" value="Yes" required>
+
+                            <span>
+                                I agree that my information may be used to respond to this
+                                vocation inquiry in accordance with the
+
+                                <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">
+
+                                    Privacy Policy
+
+                                </a>.
+                            </span>
+
+                        </label>
+
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="vocation-submit-btn" id="vocationSubmitBtn">
+
+                            <i class="fas fa-paper-plane me-2"></i>
+
+                            <span id="vocationButtonText">
+                                Send Inquiry
+                            </span>
+
                         </button>
 
-                        <div id="formStatus"></div>
+
+                        <!-- Status Message -->
+                        <div id="formStatus" role="status" aria-live="polite">
+
+                        </div>
 
                     </form>
 
@@ -138,9 +193,12 @@
 
     </section>
 
+    <!-- =========================
+     FOOTER
+========================= -->
+
     <footer class="footer" id="contact">
 
-        ```
         <div class="footer-wrapper">
 
             <div class="row g-5 align-items-start">
@@ -148,11 +206,10 @@
                 <!-- ABOUT -->
 
                 <div class="col-lg-3 col-md-6">
+
                     <h4 class="footer-heading">
                         Servite Mission Sisters
                     </h4>
-
-
 
                     <p class="footer-tagline">
                         Simplicity and Sacrifice
@@ -186,15 +243,92 @@
 
                     <ul class="footer-links">
 
-                        <li><a href="index.html#hero">Home</a></li>
+                        <li>
+                            <a href="index.html#hero">Home</a>
+                        </li>
 
-                        <li><a href="index.html#about">Who We Are</a></li>
+                        <li>
+                            <a href="index.html#about">Who We Are</a>
+                        </li>
 
-                        <li><a href="index.html#vocation">Vocation</a></li>
+                        <li>
+                            <a href="index.html#vocation">Vocation</a>
+                        </li>
 
-                        <li><a href="index.html#welfare">Welfare Support</a></li>
+                        <li>
+                            <a href="index.html#welfare">Welfare Support</a>
+                        </li>
 
-                        <li><a href="index.html#contact">Contact</a></li>
+                        <li>
+                            <a href="donate.html">Donate</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#contact">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- WEBSITE POLICIES -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <h4 class="footer-heading">
+                        Policies
+                    </h4>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="privacy-policy.html">
+                                Privacy Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="cookie-policy.html">
+                                Cookie Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="terms-and-conditions.html">
+                                Terms &amp; Conditions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="donation-policy.html">
+                                Donation Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="safeguarding-policy.html">
+                                Safeguarding Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="copyright-policy.html">
+                                Copyright Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="disclaimer.html">
+                                Disclaimer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="accessibility-statement.html">
+                                Accessibility
+                            </a>
+                        </li>
 
                     </ul>
 
@@ -203,55 +337,49 @@
 
                 <!-- CONTACT INFORMATION -->
 
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-2 col-md-6">
 
                     <h4 class="footer-heading">
-                        Contact US
+                        Contact Us
                     </h4>
 
                     <div class="footer-contact">
 
                         <p>
                             <i class="fas fa-map-marker-alt"></i>
-                            <strong>Address</strong><br>
+                            <strong>Address:</strong><br>
                             Servite Mission Sisters<br>
-                            African Region<br>
-
-
+                            African Region
                         </p>
-                        <!---
-                
-
-                <p>
-                    <i class="fas fa-phone-alt"></i>
-                    <strong>Nigeria:</strong><br>
-                    +234 XXX XXX XXXX
-                </p>
-
-                <p>
-                    <i class="fas fa-phone-alt"></i>
-                    <strong>London</strong><br>
-                    + XXX XXX XXXX
-                </p>
-            -->
 
                         <p>
                             <i class="fas fa-envelope"></i>
                             <strong>Vocations:</strong><br>
-                            vocations@servitemissionsisters.org
+
+                            <a href="mailto:vocation@servitemissionsisters.org">
+                                vocation@servitemissionsisters.org
+                            </a>
                         </p>
 
                         <p>
                             <i class="fas fa-envelope"></i>
                             <strong>General Enquiries:</strong><br>
-                            info@servitemissionsisters.org
+
+                            <a href="mailto:info@servitemissionsisters.org">
+                                info@servitemissionsisters.org
+                            </a>
                         </p>
+
                         <p>
                             <i class="fas fa-globe"></i>
                             <strong>Website:</strong><br>
-                            <a href="https://www.servitemissionsisters.org" target="_blank">
+
+                            <a href="https://www.servitemissionsisters.org" target="_blank" rel="noopener noreferrer">
+
                                 www.servitemissionsisters.org
+
                             </a>
+                        </p>
 
                     </div>
 
@@ -260,7 +388,7 @@
 
                 <!-- NEWSLETTER -->
 
-                <div class="col-lg-4 col-md-12">
+                <div class="col-lg-3 col-md-12">
 
                     <h4 class="footer-heading">
                         Subscribe to Our Newsletter
@@ -274,7 +402,7 @@
 
                     <form class="footer-newsletter">
 
-                        <input type="email" placeholder="Enter your email address">
+                        <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
 
                         <button type="submit">
                             Subscribe
@@ -284,13 +412,21 @@
 
                     <div class="footer-social">
 
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
 
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
 
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
 
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="X">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
 
                     </div>
 
@@ -298,7 +434,9 @@
 
             </div>
 
+
             <hr class="footer-line">
+
 
             <div class="footer-bottom">
 
@@ -308,13 +446,37 @@
                     All Rights Reserved.
                 </p>
 
+                <div class="footer-bottom-links">
+
+                    <a href="privacy-policy.html">
+                        Privacy
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="cookie-policy.html">
+                        Cookies
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="terms-and-conditions.html">
+                        Terms
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="accessibility-statement.html">
+                        Accessibility
+                    </a>
+
+                </div>
+
             </div>
 
         </div>
-        ```
 
     </footer>
-
 
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
@@ -323,35 +485,83 @@
     <script src="./assets/js/main.js"></script>
 
     <script>
-        function openImage(src) {
-            document.getElementById("modalImage").src = src;
-            new bootstrap.Modal(document.getElementById("galleryModal")).show();
-        }
-
         document.addEventListener("DOMContentLoaded", function () {
+
             const form = document.getElementById("vocationForm");
             const status = document.getElementById("formStatus");
+            const submitButton =
+                document.getElementById("vocationSubmitBtn");
 
-            if (!form || !status) {
+            const scriptUrl =
+                "https://script.google.com/macros/s/AKfycbxfdU0dmx7Om6xZVf5p6jlhsZzfURyVg5MhDh3_8j0TEPl8o6KZfFIEtMh-VhnNIwaA/exec";
+
+            if (!form || !status || !submitButton) {
                 return;
             }
 
-            form.addEventListener("submit", function (e) {
-                e.preventDefault();
+            form.addEventListener("submit", async function (event) {
+                event.preventDefault();
 
-                status.innerHTML = "Sending your inquiry...";
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
 
-                const formData = new FormData(form);
+                submitButton.disabled = true;
 
-                fetch("https://script.google.com/macros/s/AKfycbydHSFPSJGOHoZVjOV6zA9ruJ1ilDlm6JFatEV63o4AOC9MuIuund5D5W-2g8Y2b7ZLQA/exec", {
-                    method: "POST",
-                    mode: "no-cors",
-                    body: formData
-                });
+                status.className = "form-sending";
+                status.textContent = "Sending your inquiry...";
 
-                status.innerHTML = "Thank you. Your inquiry has been submitted successfully.";
-                form.reset();
+                try {
+                    const formData = new FormData(form);
+
+                    const response = await fetch(scriptUrl, {
+                        method: "POST",
+                        body: formData
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(
+                            `Server returned ${response.status}`
+                        );
+                    }
+
+                    const result = await response.json();
+
+                    if (!result.success) {
+                        throw new Error(
+                            result.message ||
+                            "The inquiry could not be submitted."
+                        );
+                    }
+
+                    status.className = "form-success";
+                    status.textContent = result.message;
+
+                    form.reset();
+
+                    if (typeof gtag === "function") {
+                        gtag("event", "vocation_inquiry_submit", {
+                            form_name: "Vocation Inquiry",
+                            page_location: window.location.href
+                        });
+                    }
+
+                } catch (error) {
+                    console.error("Vocation form error:", error);
+
+                    status.className = "form-error";
+
+                    status.innerHTML =
+                        'We could not submit your inquiry. Please try again or email ' +
+                        '<a href="mailto:vocation@servitemissionsisters.org">' +
+                        'vocation@servitemissionsisters.org</a>.';
+
+                } finally {
+                    submitButton.disabled = false;
+                }
             });
+
         });
     </script>
 
