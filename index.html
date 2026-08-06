@@ -24,13 +24,21 @@
 
   <!-- Favicon -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <!-- =========================================
+     FAVICON
+========================================= -->
 
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
-  <link rel="shortcut icon" href="./assets/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="./assets/images/favicon-48x48.png">
+
+<link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+
+<link rel="shortcut icon" href="./assets/images/favicon.ico">
+
+<meta name="theme-color" content="#062b6f">
 
   <!-- CSS -->
 
@@ -893,33 +901,55 @@
     <div class="row align-items-center g-0 vocation-contact-box mt-5">
 
       <!-- Left Form -->
+      <!-- Left Form -->
+      <!-- =========================
+     VOCATION INQUIRY FORM
+========================= -->
+
       <div class="col-lg-5">
 
         <div class="vocation-contact-form">
 
-          <span class="small-text">JOIN US</span>
+          <span class="small-text">
+            JOIN US
+          </span>
 
-          <h3 class="form-heading">Vocation<span style="color:#ff8c00;">Inquiry</span></h3>
+          <h3 class="form-heading">
+            Vocation
+            <span style="color:#ff8c00;">Inquiry</span>
+          </h3>
 
           <p class="form-intro">
             If you are discerning a call and would like to learn more,
-            you are welcome to make contact. All enquiries are treated with care and confidentiality.
+            you are welcome to make contact. All enquiries are treated
+            with care and confidentiality.
           </p>
+
           <form id="vocationForm">
 
-            <input type="text" name="fullname" placeholder="Full Name" required>
+            <!-- Full Name -->
+            <input type="text" name="fullname" placeholder="Full Name" autocomplete="name" required>
 
-            <input type="email" name="email" placeholder="Email Address" required>
 
-            <input type="tel" name="phone" placeholder="Phone Number (Optional)">
+            <!-- Email -->
+            <input type="email" name="email" placeholder="Email Address" autocomplete="email" required>
+
+
+            <!-- Phone -->
+            <input type="tel" name="phone" placeholder="Phone Number (Optional)" autocomplete="tel">
+
 
             <div class="row">
 
+              <!-- Age -->
               <div class="col-md-6 mb-3">
 
                 <select name="age" class="form-select-field" required>
 
-                  <option value="">Select Age Range</option>
+                  <option value="">
+                    Select Age Range
+                  </option>
+
                   <option value="10-15">10 - 15</option>
                   <option value="16-20">16 - 20</option>
                   <option value="21-25">21 - 25</option>
@@ -935,30 +965,64 @@
 
               </div>
 
+
+              <!-- Country -->
               <div class="col-md-6 mb-3">
 
-                <input type="text" name="country" placeholder="Country of Residence">
+                <input type="text" name="country" placeholder="Country of Residence" autocomplete="country-name"
+                  required>
 
               </div>
 
             </div>
 
+
+            <!-- Message -->
             <textarea name="message" rows="5" placeholder="Tell us about yourself and why you feel called..."
               required></textarea>
 
-            <button type="submit" class="vocation-submit-btn">
 
-              Send Inquiry
+            <!-- Privacy Consent -->
+            <label class="vocation-consent">
+
+              <input type="checkbox" name="privacyConsent" value="Yes" required>
+
+              <span>
+                I agree that my information may be used to respond to this
+                vocation inquiry in accordance with the
+
+                <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">
+
+                  Privacy Policy
+
+                </a>.
+              </span>
+
+            </label>
+
+
+            <!-- Submit Button -->
+            <button type="submit" class="vocation-submit-btn" id="vocationSubmitBtn">
+
+              <i class="fas fa-paper-plane me-2"></i>
+
+              <span id="vocationButtonText">
+                Send Inquiry
+              </span>
 
             </button>
 
-            <div id="formStatus"></div>
+
+            <!-- Status Message -->
+            <div id="formStatus" role="status" aria-live="polite">
+
+            </div>
 
           </form>
+
         </div>
 
       </div>
-
       <!-- Right Map -->
       <div class="col-lg-7">
         <div class="vocation-map">
@@ -1583,30 +1647,86 @@
   </script>
 
   <script>
-
     document.addEventListener("DOMContentLoaded", function () {
+
       const form = document.getElementById("vocationForm");
       const status = document.getElementById("formStatus");
+      const submitButton =
+        document.getElementById("vocationSubmitBtn");
 
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
+      const scriptUrl =
+        "https://script.google.com/macros/s/AKfycbxfdU0dmx7Om6xZVf5p6jlhsZzfURyVg5MhDh3_8j0TEPl8o6KZfFIEtMh-VhnNIwaA/exec";
 
-        status.innerHTML = "Sending your inquiry...";
+      if (!form || !status || !submitButton) {
+        return;
+      }
 
-        const formData = new FormData(form);
+      form.addEventListener("submit", async function (event) {
+        event.preventDefault();
 
-        fetch("https://script.google.com/macros/s/AKfycbydHSFPSJGOHoZVjOV6zA9ruJ1ilDlm6JFatEV63o4AOC9MuIuund5D5W-2g8Y2b7ZLQA/exec", {
-          method: "POST",
-          mode: "no-cors",
-          body: formData
-        });
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
 
-        status.innerHTML = "Thank you. Your inquiry has been submitted successfully.";
-        form.reset();
+        submitButton.disabled = true;
+
+        status.className = "form-sending";
+        status.textContent = "Sending your inquiry...";
+
+        try {
+          const formData = new FormData(form);
+
+          const response = await fetch(scriptUrl, {
+            method: "POST",
+            body: formData
+          });
+
+          if (!response.ok) {
+            throw new Error(
+              `Server returned ${response.status}`
+            );
+          }
+
+          const result = await response.json();
+
+          if (!result.success) {
+            throw new Error(
+              result.message ||
+              "The inquiry could not be submitted."
+            );
+          }
+
+          status.className = "form-success";
+          status.textContent = result.message;
+
+          form.reset();
+
+          if (typeof gtag === "function") {
+            gtag("event", "vocation_inquiry_submit", {
+              form_name: "Vocation Inquiry",
+              page_location: window.location.href
+            });
+          }
+
+        } catch (error) {
+          console.error("Vocation form error:", error);
+
+          status.className = "form-error";
+
+          status.innerHTML =
+            'We could not submit your inquiry. Please try again or email ' +
+            '<a href="mailto:vocation@servitemissionsisters.org">' +
+            'vocation@servitemissionsisters.org</a>.';
+
+        } finally {
+          submitButton.disabled = false;
+        }
       });
-    });
 
+    });
   </script>
+
 
 </body>
 
