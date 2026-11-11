@@ -49,6 +49,158 @@
     <link rel="stylesheet" href="./assets/icons/fontawesome/css/solid.min.css">
     <link rel="stylesheet" href="./assets/icons/fontawesome/css/brands.min.css">
 
+    <!-- Donation selector styles, scoped to this card -->
+    <style>
+        .sms-donation-amounts {
+            margin: 24px 0 18px
+        }
+
+        .sms-donation-amounts h3 {
+            font-size: 1.1rem;
+            font-weight: 750;
+            margin-bottom: 8px
+        }
+
+        .sms-donation-amounts p {
+            font-size: .9rem;
+            margin-bottom: 14px
+        }
+
+        .sms-amount-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px
+        }
+
+        .sms-amount-choice {
+            min-height: 58px;
+            border: 2px solid #d3d9e2;
+            border-radius: 12px;
+            background: white;
+            color: #062b6f;
+            font-size: 1.08rem;
+            font-weight: 750;
+            cursor: pointer;
+            transition: .2s
+        }
+
+        .sms-amount-choice:hover,
+        .sms-amount-choice:focus-visible {
+            border-color: #062b6f;
+            background: #f0f5ff
+        }
+
+        .sms-amount-choice[aria-pressed="true"] {
+            background: #062b6f;
+            border-color: #062b6f;
+            color: #fff
+        }
+
+        .sms-custom-box {
+            margin-top: 14px;
+            border: 2px solid #d3d9e2;
+            border-radius: 14px;
+            padding: 16px;
+            background: #fff
+        }
+
+        .sms-custom-box label {
+            display: block;
+            font-size: .92rem;
+            font-weight: 700;
+            margin-bottom: 9px;
+            color: #263447
+        }
+
+        .sms-custom-entry {
+            display: flex;
+            align-items: center;
+            gap: 10px
+        }
+
+        .sms-custom-symbol {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #062b6f
+        }
+
+        .sms-custom-entry input {
+            width: 100%;
+            min-width: 0;
+            border: 0;
+            outline: 0;
+            font-size: 2rem;
+            font-weight: 750;
+            color: #062b6f;
+            background: transparent
+        }
+
+        .sms-currency {
+            font-weight: 750;
+            color: #062b6f;
+            white-space: nowrap
+        }
+
+        .sms-checkout {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            margin-top: 16px;
+            padding: 15px;
+            border: 0;
+            border-radius: 10px;
+            background: #062b6f;
+            color: #fff;
+            font-weight: 750;
+            cursor: pointer
+        }
+
+        .sms-checkout:hover {
+            background: #0c438f
+        }
+
+        .sms-checkout:disabled {
+            opacity: .55;
+            cursor: not-allowed
+        }
+
+        .sms-donation-note {
+            font-size: .82rem;
+            line-height: 1.5;
+            margin: 10px 0 0;
+            color: #596577
+        }
+
+        .sms-donation-error {
+            color: #a72c2c;
+            font-size: .86rem;
+            margin-top: 8px;
+            display: none
+        }
+
+        .sms-donation-note {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            font-size: 13px;
+            line-height: 1.6;
+            color: #64748b;
+        }
+
+        .sms-donation-note i {
+            color: #2563eb;
+            margin-right: 5px;
+        }
+
+
+        @media(max-width:400px) {
+            .sms-amount-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr))
+            }
+        }
+    </style>
+
     <!-- Donation Page CSS -->
     <link rel="stylesheet" href="./assets/css/donate.css">
     <link rel="stylesheet" href="./assets/css/style.css">
@@ -116,13 +268,12 @@
                         formation and service to vulnerable communities.
                     </p>
 
-                    <a href="https://donate.stripe.com/6oU28rfLg4WHcLE6FraIM00" class="hero-donate-btn">
 
+                    <a href="#donation-form" class="hero-donate-btn">
                         <i class="fas fa-heart"></i>
-
                         Make a Donation
-
                     </a>
+
 
                 </div>
 
@@ -356,15 +507,56 @@
                             </div>
 
 
-                            <a href="https://donate.stripe.com/6oU28rfLg4WHcLE6FraIM00" class="stripe-donation-btn"
-                                target="_blank" rel="noopener noreferrer">
+                            <!-- Interactive one-time USD donation selector -->
+                            <div class="sms-donation-amounts" aria-labelledby="sms-donation-amount-title"
+                                id="donation-form">
+                                <h3 id="sms-donation-amount-title">Choose Your Donation</h3>
+                                <p>Select an amount or enter your own amount in US dollars.</p>
+                                <div class="sms-amount-grid" role="group" aria-label="Suggested donation amounts">
+                                    <button type="button" class="sms-amount-choice" data-amount="10"
+                                        aria-pressed="false">$10</button>
+                                    <button type="button" class="sms-amount-choice" data-amount="50"
+                                        aria-pressed="false">$50</button>
+                                    <button type="button" class="sms-amount-choice" data-amount="100"
+                                        aria-pressed="true">$100</button>
+                                    <button type="button" class="sms-amount-choice" data-amount="250"
+                                        aria-pressed="false">$250</button>
+                                    <button type="button" class="sms-amount-choice" data-amount="500"
+                                        aria-pressed="false">$500</button>
+                                    <button type="button" class="sms-amount-choice" data-amount="1000"
+                                        aria-pressed="false">$1000</button>
+                                </div>
 
-                                <i class="fas fa-lock"></i>
+                                <div class="sms-custom-box">
+                                    <label for="sms-donation-input">
+                                        Or enter your own amount
+                                    </label>
 
-                                Donate Securely
+                                    <div class="sms-custom-entry">
+                                        <span class="sms-custom-symbol" aria-hidden="true">$</span>
 
-                            </a>
+                                        <input id="sms-donation-input" type="number" inputmode="decimal" min="0.50"
+                                            step="0.01" value="100"
+                                            aria-describedby="sms-donation-note sms-donation-error">
 
+                                        <span class="sms-currency">USD</span>
+                                    </div>
+
+                                    <p id="sms-donation-note" class="sms-donation-note">
+                                        <i class="fas fa-info-circle" aria-hidden="true"></i>
+                                        Giving a different amount? You can enter your donation
+                                        amount securely at payment page.
+                                    </p>
+                                </div>
+
+                                <p id="sms-donation-error" class="sms-donation-error" role="alert">Please enter a valid
+                                    donation amount.</p>
+                                <button id="sms-donate-submit" class="sms-checkout" type="button"><i class="fas fa-lock"
+                                        aria-hidden="true"></i> Continue to Secure Donation</button>
+                                <p id="sms-donation-note" class="sms-donation-note">Suggested amounts open their
+                                    matching Stripe checkout. For other amounts, Stripe will ask you to enter your
+                                    chosen amount again. Your donation is not charged on this page.</p>
+                            </div>
 
                             <div class="stripe-information">
 
@@ -735,12 +927,10 @@
 
                     </div>
 
-                    <a href="https://donate.stripe.com/6oU28rfLg4WHcLE6FraIM00" target="_blank"
-                        rel="noopener noreferrer" class="final-cta-btn">
-
+                    <a href="#donation-form" class="hero-donate-btn">
                         <i class="fas fa-heart"></i>
-
-                        Donate Now
+                        Make a Donation
+                    </a>
 
                     </a>
 
@@ -759,290 +949,290 @@
          FOOTER
     ========================= -->
 
-     <!-- =========================
+    <!-- =========================
      FOOTER
 ========================= -->
 
-  <footer class="footer" id="contact">
+    <footer class="footer" id="contact">
 
-    <div class="footer-wrapper">
+        <div class="footer-wrapper">
 
-      <div class="row g-5 align-items-start">
+            <div class="row g-5 align-items-start">
 
-        <!-- ABOUT -->
+                <!-- ABOUT -->
 
-        <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6">
 
-          <h4 class="footer-heading">
-            Servite Mission Sisters
-          </h4>
+                    <h4 class="footer-heading">
+                        Servite Mission Sisters
+                    </h4>
 
-          <p class="footer-tagline">
-            Simplicity and Sacrifice
-          </p>
+                    <p class="footer-tagline">
+                        Simplicity and Sacrifice
+                    </p>
 
-          <div class="footer-prayer-card">
+                    <div class="footer-prayer-card">
 
-            <h5>
-              <i class="fas fa-praying-hands me-2"></i>
-              Prayer in Action
-            </h5>
+                        <h5>
+                            <i class="fas fa-praying-hands me-2"></i>
+                            Prayer in Action
+                        </h5>
 
-            <p>
-              We are not set apart from the world, but sent into it.
-              Through prayer, service, and daily witness, we unite
-              faith and action in all we do.
-            </p>
+                        <p>
+                            We are not set apart from the world, but sent into it.
+                            Through prayer, service, and daily witness, we unite
+                            faith and action in all we do.
+                        </p>
 
-          </div>
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <h4 class="footer-heading">
+                        Quick Links
+                    </h4>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="index.html#hero">Home</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#about">Who We Are</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#vocation">Vocation</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#welfare">Welfare Support</a>
+                        </li>
+
+                        <li>
+                            <a href="donate.html">Donate</a>
+                        </li>
+
+                        <li>
+                            <a href="index.html#contact">Contact</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- WEBSITE POLICIES -->
+
+                <div class="col-lg-2 col-md-6">
+
+                    <h4 class="footer-heading">
+                        Policies
+                    </h4>
+
+                    <ul class="footer-links">
+
+                        <li>
+                            <a href="privacy-policy.html">
+                                Privacy Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="cookie-policy.html">
+                                Cookie Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="terms-and-conditions.html">
+                                Terms &amp; Conditions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="donation-policy.html">
+                                Donation Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="safeguarding-policy.html">
+                                Safeguarding Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="copyright-policy.html">
+                                Copyright Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="disclaimer.html">
+                                Disclaimer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="accessibility-statement.html">
+                                Accessibility
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <!-- CONTACT INFORMATION -->
+
+                <div class="col-lg-3 col-md-6">
+
+                    <h4 class="footer-heading">
+                        Contact Us
+                    </h4>
+
+                    <div class="footer-contact">
+
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong>Address:</strong><br>
+                            Servite Mission Sisters<br>
+                            African Region
+                        </p>
+
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            <strong>Vocations:</strong><br>
+
+                            <a href="mailto:vocation@servitemissionsisters.org">
+                                vocation@servitemissionsisters.org
+                            </a>
+                        </p>
+
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            <strong>General Enquiries:</strong><br>
+
+                            <a href="mailto:info@servitemissionsisters.org">
+                                info@servitemissionsisters.org
+                            </a>
+                        </p>
+
+                        <p>
+                            <i class="fas fa-globe"></i>
+                            <strong>Website:</strong><br>
+
+                            <a href="https://www.servitemissionsisters.org" target="_blank" rel="noopener noreferrer">
+
+                                www.servitemissionsisters.org
+
+                            </a>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- NEWSLETTER -->
+
+                <div class="col-lg-4 col-md-12">
+
+                    <h4 class="footer-heading">
+                        Subscribe to Our Newsletter
+                    </h4>
+
+                    <p class="footer-news-text">
+                        Receive updates on our mission, formation,
+                        welfare projects, community outreach,
+                        and upcoming events.
+                    </p>
+
+                    <form class="footer-newsletter">
+
+                        <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
+
+                        <button type="submit">
+                            Subscribe
+                        </button>
+
+                    </form>
+
+                    <div class="footer-social">
+
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+
+                        <a href="#" aria-label="X">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <hr class="footer-line">
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Servite Mission Sisters – African Region of the
+                    Servite Secular Institute (Servants of Mary).
+                    All Rights Reserved.
+                </p>
+
+                <div class="footer-bottom-links">
+
+                    <a href="privacy-policy.html">
+                        Privacy
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="cookie-policy.html">
+                        Cookies
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="terms-and-conditions.html">
+                        Terms
+                    </a>
+
+                    <span>|</span>
+
+                    <a href="accessibility-statement.html">
+                        Accessibility
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 
-
-        <!-- QUICK LINKS -->
-
-        <div class="col-lg-2 col-md-6">
-
-          <h4 class="footer-heading">
-            Quick Links
-          </h4>
-
-          <ul class="footer-links">
-
-            <li>
-              <a href="index.html#hero">Home</a>
-            </li>
-
-            <li>
-              <a href="index.html#about">Who We Are</a>
-            </li>
-
-            <li>
-              <a href="index.html#vocation">Vocation</a>
-            </li>
-
-            <li>
-              <a href="index.html#welfare">Welfare Support</a>
-            </li>
-
-            <li>
-              <a href="donate.html">Donate</a>
-            </li>
-
-            <li>
-              <a href="index.html#contact">Contact</a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <!-- WEBSITE POLICIES -->
-
-        <div class="col-lg-2 col-md-6">
-
-          <h4 class="footer-heading">
-            Policies
-          </h4>
-
-          <ul class="footer-links">
-
-            <li>
-              <a href="privacy-policy.html">
-                Privacy Policy
-              </a>
-            </li>
-
-            <li>
-              <a href="cookie-policy.html">
-                Cookie Policy
-              </a>
-            </li>
-
-            <li>
-              <a href="terms-and-conditions.html">
-                Terms &amp; Conditions
-              </a>
-            </li>
-
-            <li>
-              <a href="donation-policy.html">
-                Donation Policy
-              </a>
-            </li>
-
-            <li>
-              <a href="safeguarding-policy.html">
-                Safeguarding Policy
-              </a>
-            </li>
-
-            <li>
-              <a href="copyright-policy.html">
-                Copyright Policy
-              </a>
-            </li>
-
-            <li>
-              <a href="disclaimer.html">
-                Disclaimer
-              </a>
-            </li>
-
-            <li>
-              <a href="accessibility-statement.html">
-                Accessibility
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-
-        <!-- CONTACT INFORMATION -->
-
-        <div class="col-lg-3 col-md-6">
-
-          <h4 class="footer-heading">
-            Contact Us
-          </h4>
-
-          <div class="footer-contact">
-
-            <p>
-              <i class="fas fa-map-marker-alt"></i>
-              <strong>Address:</strong><br>
-              Servite Mission Sisters<br>
-              African Region
-            </p>
-
-            <p>
-              <i class="fas fa-envelope"></i>
-              <strong>Vocations:</strong><br>
-
-              <a href="mailto:vocation@servitemissionsisters.org">
-                vocation@servitemissionsisters.org
-              </a>
-            </p>
-
-            <p>
-              <i class="fas fa-envelope"></i>
-              <strong>General Enquiries:</strong><br>
-
-              <a href="mailto:info@servitemissionsisters.org">
-                info@servitemissionsisters.org
-              </a>
-            </p>
-
-            <p>
-              <i class="fas fa-globe"></i>
-              <strong>Website:</strong><br>
-
-              <a href="https://www.servitemissionsisters.org" target="_blank" rel="noopener noreferrer">
-
-                www.servitemissionsisters.org
-
-              </a>
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <!-- NEWSLETTER -->
-
-        <div class="col-lg-4 col-md-12">
-
-          <h4 class="footer-heading">
-            Subscribe to Our Newsletter
-          </h4>
-
-          <p class="footer-news-text">
-            Receive updates on our mission, formation,
-            welfare projects, community outreach,
-            and upcoming events.
-          </p>
-
-          <form class="footer-newsletter">
-
-            <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
-
-            <button type="submit">
-              Subscribe
-            </button>
-
-          </form>
-
-          <div class="footer-social">
-
-            <a href="#" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-
-            <a href="#" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-
-            <a href="#" aria-label="YouTube">
-              <i class="fab fa-youtube"></i>
-            </a>
-
-            <a href="#" aria-label="X">
-              <i class="fab fa-x-twitter"></i>
-            </a>
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <hr class="footer-line">
-
-
-      <div class="footer-bottom">
-
-        <p>
-          © 2026 Servite Mission Sisters – African Region of the
-          Servite Secular Institute (Servants of Mary).
-          All Rights Reserved.
-        </p>
-
-        <div class="footer-bottom-links">
-
-          <a href="privacy-policy.html">
-            Privacy
-          </a>
-
-          <span>|</span>
-
-          <a href="cookie-policy.html">
-            Cookies
-          </a>
-
-          <span>|</span>
-
-          <a href="terms-and-conditions.html">
-            Terms
-          </a>
-
-          <span>|</span>
-
-          <a href="accessibility-statement.html">
-            Accessibility
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </footer>
+    </footer>
 
 
     <!-- Footer End -->
@@ -1058,6 +1248,43 @@
 
     <!-- Bootstrap JavaScript -->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        (function () {
+
+            const links = {
+                '10': 'https://buy.stripe.com/7sYaEXaqW4WHfXQ4xjaIM07',
+                '50': 'https://buy.stripe.com/9B6cN50Qm0GrfXQ7JvaIM06',
+                '100': 'https://buy.stripe.com/fZu28reHcexhaDw8NzaIM05',
+                '250': 'https://buy.stripe.com/3cIfZh56C1Kv6ng1l7aIM04',
+                '500': 'https://buy.stripe.com/6oU5kD0QmdtddPI7JvaIM08',
+                '1000': 'https://buy.stripe.com/6oUbJ11Uq2Ozh1U1l7aIM09'
+            };
+
+            const customStripeLink = 'https://buy.stripe.com/dRm6oH56Cah18vofbXaIM0a';
+            const input = document.getElementById('sms-donation-input');
+            const buttons = Array.from(document.querySelectorAll('.sms-amount-choice'));
+            const error = document.getElementById('sms-donation-error');
+            function sync() {
+                const val = input.value.trim();
+                buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.amount === val)));
+                error.style.display = 'none';
+            }
+            buttons.forEach(button => button.addEventListener('click', () => {
+                input.value = button.dataset.amount;
+                sync();
+            }));
+            input.addEventListener('input', sync);
+            document.getElementById('sms-donate-submit').addEventListener('click', () => {
+                const value = Number(input.value);
+                if (!Number.isFinite(value) || value < 0.5 || !/^\d+(?:\.\d{1,2})?$/.test(input.value.trim())) {
+                    error.style.display = 'block'; input.focus(); return;
+                }
+                const link = links[String(value)] || customStripeLink;
+                window.open(link, '_blank', 'noopener,noreferrer');
+            });
+        })();
+    </script>
 
     <!-- Current Year -->
     <script>
